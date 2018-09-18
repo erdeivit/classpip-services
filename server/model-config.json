@@ -1,0 +1,69 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ]
+  },
+  "User": {
+    "dataSource": "db",
+    "public": true
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Email": {
+    "dataSource": "emailDs"
+  },
+  "School": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Student": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Teacher": {
+    "dataSource": "db",
+    "public": true
+  },
+  "SchoolAdmin": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Avatar": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Group": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Grade": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Matter": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Badge": {
+    "dataSource": "db",
+    "public": true
+  }
+}

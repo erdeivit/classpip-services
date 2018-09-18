@@ -1,0 +1,14 @@
+.git
+.vscode
+node_modules/
+coverage/
+
+.editorconfig
+.eslintignore
+.eslintrc
+.gitattributes
+.gitignore
+.travis.yml
+.yo-rc.json
+coveralls.js
+deploy.sh

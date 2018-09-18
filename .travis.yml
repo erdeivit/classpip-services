@@ -1,0 +1,17 @@
+sudo: required
+language: node_js
+node_js: 6
+
+services:
+  - docker
+
+script:
+  - npm test
+  - npm run coveralls
+  - docker build -t classpip/classpip-services .
+
+deploy:
+  provider: script
+  script: ./deploy.sh
+  on:
+    branch: master
