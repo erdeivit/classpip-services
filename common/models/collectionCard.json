@@ -1,6 +1,6 @@
 {
-  "name": "Badge",
-  "plural": "badges",
+  "name": "CollectionCard",
+  "plural": "collectionCards",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -16,40 +16,48 @@
       "dataType": "longtext",
       "required": true
     },
-    "value": {
-      "type": "number",
+    "num": {
+      "type": "string",
       "required": true
+    },
+    "createdBy": {
+      "type": "string",
+      "required": true
+    },
+    "badgeId":{
+      "type": "string",
+      "required": false
     }
   },
   "validations": [],
   "relations": {
-    "school": {
-      "type": "belongsTo",
-      "model": "School",
-      "foreignKey": "schoolId"
+    "cards": {
+      "type": "hasMany",
+      "model": "Card",
+      "foreignKey": "collectionCardId"
     },
-    "teacher": {
-      "type": "belongsTo",
+    "teachers": {
+      "type": "hasAndBelongsToMany",
       "model": "Teacher",
       "foreignKey": "teacherId"
-    },
-    "badgeRelations": {
-      "type": "hasMany",
-      "model": "BadgeRelation",
-      "foreignKey": "badgeId"
     },
     "students": {
       "type": "hasAndBelongsToMany",
       "model": "Student",
       "foreignKey": "studentId"
+    },
+    "groups":{
+      "type": "hasAndBelongsToMany",
+      "model": "Group",
+      "foreignKey": "groupId"
     }
   },
   "acls": [{
-      "accessType": "*",
-      "principalType": "ROLE",
-      "principalId": "$everyone",
-      "permission": "ALLOW"
-    },
+    "accessType": "*",
+    "principalType": "ROLE",
+    "principalId": "$everyone",
+    "permission": "DENY"
+  },
     {
       "accessType": "READ",
       "principalType": "ROLE",

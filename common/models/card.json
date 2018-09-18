@@ -1,6 +1,6 @@
 {
-  "name": "Badge",
-  "plural": "badges",
+  "name": "Card",
+  "plural": "cards",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -16,27 +16,21 @@
       "dataType": "longtext",
       "required": true
     },
-    "value": {
-      "type": "number",
+    "ratio": {
+      "type": "string",
+      "required": true
+    },
+    "rank": {
+      "type": "string",
       "required": true
     }
   },
   "validations": [],
   "relations": {
-    "school": {
+    "collectionCards": {
       "type": "belongsTo",
-      "model": "School",
-      "foreignKey": "schoolId"
-    },
-    "teacher": {
-      "type": "belongsTo",
-      "model": "Teacher",
-      "foreignKey": "teacherId"
-    },
-    "badgeRelations": {
-      "type": "hasMany",
-      "model": "BadgeRelation",
-      "foreignKey": "badgeId"
+      "model": "CollectionCard",
+      "foreignKey": "collectionCardId"
     },
     "students": {
       "type": "hasAndBelongsToMany",
@@ -44,11 +38,12 @@
       "foreignKey": "studentId"
     }
   },
-  "acls": [{
+  "acls": [
+    {
       "accessType": "*",
       "principalType": "ROLE",
       "principalId": "$everyone",
-      "permission": "ALLOW"
+      "permission": "DENY"
     },
     {
       "accessType": "READ",
@@ -65,3 +60,4 @@
   ],
   "methods": {}
 }
+

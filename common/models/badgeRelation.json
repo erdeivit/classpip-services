@@ -1,21 +1,12 @@
 {
-  "name": "Badge",
-  "plural": "badges",
+  "name": "BadgeRelation",
+  "plural": "badgeRelations",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
-  "properties": {
-    "name": {
-      "type": "string",
-      "required": true
-    },
-    "image": {
-      "type": "string",
-      "dataType": "longtext",
-      "required": true
-    },
+  "properties": {    
     "value": {
       "type": "number",
       "required": true
@@ -23,23 +14,23 @@
   },
   "validations": [],
   "relations": {
-    "school": {
+    "badges": {
+      "type": "belongsTo",
+      "model": "Badge",
+      "foreignKey": "badgeId"
+    },
+	  "groups": {
+      "type": "belongsTo",
+      "model": "Group",
+      "foreignKey": "groupId"
+    },
+    "schools": {
       "type": "belongsTo",
       "model": "School",
       "foreignKey": "schoolId"
     },
-    "teacher": {
-      "type": "belongsTo",
-      "model": "Teacher",
-      "foreignKey": "teacherId"
-    },
-    "badgeRelations": {
-      "type": "hasMany",
-      "model": "BadgeRelation",
-      "foreignKey": "badgeId"
-    },
     "students": {
-      "type": "hasAndBelongsToMany",
+      "type": "belongsTo",
       "model": "Student",
       "foreignKey": "studentId"
     }

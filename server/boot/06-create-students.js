@@ -2,6 +2,7 @@
 
 module.exports = function (app, cb) {
 
+
   app.models.Student.create([{
     id: 10000,
     username: 'student-1',
@@ -79,12 +80,13 @@ module.exports = function (app, cb) {
       id: 1,
       name: 'badge 1',
       image: 'https://cdn2.iconfinder.com/data/icons/web2/Icons/Favorite_128x128.png',
-      points: 10
+      value: 10
+
     }, {
       id: 2,
       name: 'badge 2',
       image: 'https://cdn2.iconfinder.com/data/icons/web2/Icons/Misterwong_128x128.png',
-      points: 20
+      value: 20
     }], function (err, badges) {
       if (err) throw err;
 

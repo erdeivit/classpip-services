@@ -1,5 +1,8 @@
 'use strict';
 
+if (process.env.NEW_RELIC_TOKEN) {
+  require('newrelic');
+}
 var bodyParser = require('body-parser');
 var loopback = require('loopback');
 var boot = require('loopback-boot');
@@ -13,9 +16,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(loopback.token());
 
 // configure body parser
-app.use(bodyParser.urlencoded({
-  extended: true
-}));
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.start = function () {
   // start the web server

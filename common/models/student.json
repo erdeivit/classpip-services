@@ -33,10 +33,40 @@
       "model": "Avatar",
       "foreignKey": "avatarId"
     },
+    "questionnaires": {
+      "type": "hasMany",
+      "model": "Questionnaire",
+      "foreignKey": "studentId"
+    },
     "badges": {
       "type": "hasAndBelongsToMany",
       "model": "Badge",
       "foreignKey": "studentId"
+    },
+    "collectionCards": {
+      "type": "hasAndBelongsToMany",
+      "model": "CollectionCard",
+      "foreignKey": "collectionCardId"
+    },
+    "cards": {
+      "type": "hasAndBelongsToMany",
+      "model": "Card",
+      "foreignKey": "cardId"
+    },
+    "pointRelations": {
+      "type": "hasMany",
+      "model": "PointRelation",
+      "foreignKey": "studentId"
+    },
+    "badgeRelations": {
+      "type": "hasMany",
+      "model": "BadgeRelation",
+      "foreignKey": "studentId"
+    },
+    "points": {
+      "type": "hasAndBelongsToMany",
+      "model": "Point",
+      "foreignKey": "pointId"
     }
   },
   "acls": [{
@@ -48,7 +78,7 @@
     {
       "accessType": "READ",
       "principalType": "ROLE",
-      "principalId": "$owner",
+      "principalId": "$everyone",
       "permission": "ALLOW"
     },
     {

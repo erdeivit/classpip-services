@@ -1,6 +1,6 @@
 {
-  "name": "Badge",
-  "plural": "badges",
+  "name": "Questionnaire",
+  "plural": "questionnaires",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -11,44 +11,55 @@
       "type": "string",
       "required": true
     },
-    "image": {
+    "date": {
       "type": "string",
-      "dataType": "longtext",
       "required": true
     },
-    "value": {
-      "type": "number",
+    "points":{
+      "type": "array",
+      "required": true
+    },
+    "badges":{
+      "type": "array",
+      "required": false
+    },
+    "groupid":{
+      "type": "string",
+      "required": false
+    },
+    "packCards":{
+      "type": "array",
+      "required": false
+    },
+    "active":{
+      "type": "boolean",
       "required": true
     }
+
   },
   "validations": [],
   "relations": {
-    "school": {
-      "type": "belongsTo",
-      "model": "School",
-      "foreignKey": "schoolId"
-    },
     "teacher": {
       "type": "belongsTo",
       "model": "Teacher",
       "foreignKey": "teacherId"
     },
-    "badgeRelations": {
-      "type": "hasMany",
-      "model": "BadgeRelation",
-      "foreignKey": "badgeId"
-    },
-    "students": {
-      "type": "hasAndBelongsToMany",
+    "student": {
+      "type": "belongsTo",
       "model": "Student",
       "foreignKey": "studentId"
+    },
+    "questions": {
+      "type": "hasAndBelongsToMany",
+      "model": "Question",
+      "foreignKey": "questionId"
     }
   },
   "acls": [{
       "accessType": "*",
       "principalType": "ROLE",
       "principalId": "$everyone",
-      "permission": "ALLOW"
+      "permission": "DENY"
     },
     {
       "accessType": "READ",

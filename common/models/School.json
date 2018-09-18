@@ -16,10 +16,12 @@
     },
     "image": {
       "type": "string",
+      "dataType": "longtext",
       "required": true
     },
     "imageBig": {
       "type": "string",
+      "dataType": "longtext",
       "required": true
     },
     "zipCode": {
@@ -68,6 +70,16 @@
     "teachers": {
       "type": "hasMany",
       "model": "Teacher",
+      "foreignKey": "schoolId"
+    },
+    "points": {
+      "type": "hasMany",
+      "model": "Point",
+      "foreignKey": "schoolId"
+    },
+    "badges": {
+      "type": "hasMany",
+      "model": "Badge",
       "foreignKey": "schoolId"
     },
     "students": {

@@ -29,10 +29,20 @@
       "model": "Group",
       "foreignKey": "teacherId"
     },
+	 "questionnaires": {
+      "type": "hasMany",
+      "model": "Questionnaire",
+      "foreignKey": "teacherId"
+    },
     "avatar": {
       "type": "belongsTo",
       "model": "Avatar",
       "foreignKey": "avatarId"
+    },
+    "collectionCards": {
+      "type": "hasAndBelongsToMany",
+      "model": "CollectionCard",
+      "foreignKey": "teacherId"
     }
   },
   "acls": [{
@@ -44,7 +54,7 @@
     {
       "accessType": "READ",
       "principalType": "ROLE",
-      "principalId": "$owner",
+      "principalId": "$everyone",
       "permission": "ALLOW"
     },
     {

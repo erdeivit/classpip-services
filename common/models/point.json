@@ -1,6 +1,6 @@
 {
-  "name": "Badge",
-  "plural": "badges",
+  "name": "Point",
+  "plural": "points",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -33,10 +33,10 @@
       "model": "Teacher",
       "foreignKey": "teacherId"
     },
-    "badgeRelations": {
+    "pointRelations": {
       "type": "hasMany",
-      "model": "BadgeRelation",
-      "foreignKey": "badgeId"
+      "model": "PointRelation",
+      "foreignKey": "pointId"
     },
     "students": {
       "type": "hasAndBelongsToMany",

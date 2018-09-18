@@ -54,6 +54,26 @@
     "dataSource": "db",
     "public": true
   },
+  "Questionnaire": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Question": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Answer": {
+    "dataSource": "db",
+    "public": true
+  },
+  "CorrectAnswer": {
+    "dataSource": "db",
+    "public": true
+  },
+  "ResultQuestionnaire": {
+    "dataSource": "db",
+    "public": true
+  },
   "Grade": {
     "dataSource": "db",
     "public": true
@@ -63,6 +83,26 @@
     "public": true
   },
   "Badge": {
+    "dataSource": "db",
+    "public": true
+  },
+  "BadgeRelation": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Point": {
+    "dataSource": "db",
+    "public": true
+  },
+  "PointRelation": {
+    "dataSource": "db",
+    "public": true
+  },
+  "CollectionCard": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Card": {
     "dataSource": "db",
     "public": true
   }

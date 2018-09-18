@@ -1,6 +1,6 @@
 {
-  "name": "Badge",
-  "plural": "badges",
+  "name": "Question",
+  "plural": "questions",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -11,44 +11,43 @@
       "type": "string",
       "required": true
     },
+    "type": {
+      "type": "string",
+      "required": true
+    },
     "image": {
       "type": "string",
       "dataType": "longtext",
-      "required": true
+      "required": false
     },
-    "value": {
+    "time": {
       "type": "number",
       "required": true
     }
   },
   "validations": [],
   "relations": {
-    "school": {
+    "questionnaire": {
       "type": "belongsTo",
-      "model": "School",
-      "foreignKey": "schoolId"
+      "model": "Questionnaire",
+      "foreignKey": "questionnaireId"
     },
-    "teacher": {
-      "type": "belongsTo",
-      "model": "Teacher",
-      "foreignKey": "teacherId"
-    },
-    "badgeRelations": {
-      "type": "hasMany",
-      "model": "BadgeRelation",
-      "foreignKey": "badgeId"
-    },
-    "students": {
+    "answers": {
       "type": "hasAndBelongsToMany",
-      "model": "Student",
-      "foreignKey": "studentId"
+      "model": "Answer",
+      "foreignKey": "answerId"
+    },
+    "correctAnswers": {
+      "type": "hasAndBelongsToMany",
+      "model": "CorrectAnswer",
+      "foreignKey": "correctAnswerId"
     }
   },
   "acls": [{
       "accessType": "*",
       "principalType": "ROLE",
       "principalId": "$everyone",
-      "permission": "ALLOW"
+      "permission": "DENY"
     },
     {
       "accessType": "READ",

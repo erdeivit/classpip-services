@@ -1,6 +1,6 @@
 {
-  "name": "Badge",
-  "plural": "badges",
+  "name": "Answer",
+  "plural": "answers",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -10,45 +10,21 @@
     "name": {
       "type": "string",
       "required": true
-    },
-    "image": {
-      "type": "string",
-      "dataType": "longtext",
-      "required": true
-    },
-    "value": {
-      "type": "number",
-      "required": true
     }
   },
   "validations": [],
   "relations": {
-    "school": {
+    "question": {
       "type": "belongsTo",
-      "model": "School",
-      "foreignKey": "schoolId"
-    },
-    "teacher": {
-      "type": "belongsTo",
-      "model": "Teacher",
-      "foreignKey": "teacherId"
-    },
-    "badgeRelations": {
-      "type": "hasMany",
-      "model": "BadgeRelation",
-      "foreignKey": "badgeId"
-    },
-    "students": {
-      "type": "hasAndBelongsToMany",
-      "model": "Student",
-      "foreignKey": "studentId"
+      "model": "Question",
+      "foreignKey": "questionId"
     }
   },
   "acls": [{
       "accessType": "*",
       "principalType": "ROLE",
       "principalId": "$everyone",
-      "permission": "ALLOW"
+      "permission": "DENY"
     },
     {
       "accessType": "READ",

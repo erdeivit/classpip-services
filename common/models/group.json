@@ -23,7 +23,13 @@
       "type": "hasAndBelongsToMany",
       "model": "Student",
       "foreignKey": "studentId"
+    },
+    "collectionCards":{
+      "type": "hasAndBelongsToMany",
+      "model": "CollectionCard",
+      "foreignKey":"collectionCardId"
     }
+
   },
   "acls": [{
       "accessType": "*",

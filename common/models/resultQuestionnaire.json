@@ -1,45 +1,54 @@
 {
-  "name": "Badge",
-  "plural": "badges",
+  "name": "ResultQuestionnaire",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "name": {
+    "questionnaire": {
+      "type": "Questionnaire",
+      "required": true
+    },
+    "student": {
+      "type": "Student",
+      "required": true
+    },
+    "questionnaireName": {
       "type": "string",
       "required": true
     },
-    "image": {
-      "type": "string",
-      "dataType": "longtext",
-      "required": true
-    },
-    "value": {
+    "numTotalQuestions": {
       "type": "number",
       "required": true
+    },
+    "numAnswerCorrect": {
+      "type": "number",
+      "required": true
+    },
+    "numAnswerNoCorrect": {
+      "type": "number",
+      "required": true
+    },
+    "finalNote": {
+      "type": "number",
+      "required": true
+    },
+    "dataAnswers": {
+      "type": "string",
+      "required": true
     }
+
   },
   "validations": [],
   "relations": {
-    "school": {
+    "questionnaire": {
       "type": "belongsTo",
-      "model": "School",
-      "foreignKey": "schoolId"
+      "model": "Questionnaire",
+      "foreignKey": "questionnaireId"
     },
-    "teacher": {
+    "student": {
       "type": "belongsTo",
-      "model": "Teacher",
-      "foreignKey": "teacherId"
-    },
-    "badgeRelations": {
-      "type": "hasMany",
-      "model": "BadgeRelation",
-      "foreignKey": "badgeId"
-    },
-    "students": {
-      "type": "hasAndBelongsToMany",
       "model": "Student",
       "foreignKey": "studentId"
     }
@@ -48,7 +57,7 @@
       "accessType": "*",
       "principalType": "ROLE",
       "principalId": "$everyone",
-      "permission": "ALLOW"
+      "permission": "DENY"
     },
     {
       "accessType": "READ",
