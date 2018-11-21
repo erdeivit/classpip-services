@@ -1,6 +1,6 @@
 {
-  "name": "Group",
-  "plural": "groups",
+  "name": "Team",
+  "plural": "teams",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -14,33 +14,24 @@
   },
   "validations": [],
   "relations": {
-    "teacher": {
-      "type": "belongsTo",
-      "model": "Teacher",
-      "foreignKey": "teacherId"
+    "competitions": {
+      "type": "hasAndBelongsToMany",
+      "model": "Competition",
+      "foreignKey": "competitionId"
     },
     "students": {
       "type": "hasAndBelongsToMany",
       "model": "Student",
       "foreignKey": "studentId"
     },
-    "collectionCards":{
-      "type": "hasAndBelongsToMany",
-      "model": "CollectionCard",
-      "foreignKey":"collectionCardId"
-    },
-    "competitions": {
-      "type": "hasMany",
-      "model": "Competition",
-      "foreignKey": "groupId"
-    },
-    "teams": {
-      "type": "hasMany",
-      "model": "Team",
+    "group": {
+      "type": "belongsTo",
+      "model": "Group",
       "foreignKey": "groupId"
     }
   },
-  "acls": [{
+  "acls": [
+    {
       "accessType": "*",
       "principalType": "ROLE",
       "principalId": "$everyone",
@@ -55,7 +46,7 @@
     {
       "accessType": "WRITE",
       "principalType": "ROLE",
-      "principalId": "$owner",
+      "principalId": "$authenticated",
       "permission": "ALLOW"
     }
   ],
