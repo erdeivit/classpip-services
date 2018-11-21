@@ -160,7 +160,39 @@ module.exports = function (app, cb) {
                                                 if (err) throw err;
                                                 groups[3].students.add(students[3], function (err) {
                                                   if (err) throw err;
-                                                  process.nextTick(cb);
+
+
+                                                  app.models.Team.create([{
+                                                    id: 10,
+                                                    name: 'Manzana',
+                                                    teacherId: 1000,
+                                                    groupId: 2
+                                                  }, {
+                                                    id: 11,
+                                                    name: 'Naranja',
+                                                    teacherId: 1000,
+                                                    groupId: 2
+                                                  }], function (err, teams) {
+                                                    teams[0].students.add(students[2], function (err) {
+                                                      if (err) throw err;
+                                                      teams[0].students.add(students[3], function (err) {
+                                                        if (err) throw err;
+                                                        teams[0].students.add(students[4], function (err) {
+                                                          if (err) throw err;
+                                                          teams[1].students.add(students[5], function (err) {
+                                                            if (err) throw err;
+                                                            teams[1].students.add(students[6], function (err) {
+                                                              if (err) throw err;
+                                                              teams[1].students.add(students[12], function (err) {
+                                                                if (err) throw err;
+                                                             process.nextTick(cb);
+                                                         })
+                                                     })
+                                                   })
+                                                  })
+                                                })
+                                              })
+                                            });
                                                 })
                                               })
                                             })
