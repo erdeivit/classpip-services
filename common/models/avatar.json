@@ -12,8 +12,8 @@
     },
     "image": {
       "type": "string",
-      "dataType": "longtext",
-      "required": true
+      "required": true,
+      "dataType": "longtext"
     }
   },
   "validations": [],
@@ -24,7 +24,8 @@
       "foreignKey": "studentId"
     }
   },
-  "acls": [{
+  "acls": [
+    {
       "accessType": "*",
       "principalType": "ROLE",
       "principalId": "$everyone",

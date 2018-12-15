@@ -15,27 +15,26 @@
       "type": "string",
       "required": true
     },
-    "points":{
+    "points": {
       "type": "array",
       "required": true
     },
-    "badges":{
+    "badges": {
       "type": "array",
       "required": false
     },
-    "groupid":{
+    "groupid": {
       "type": "string",
       "required": false
     },
-    "packCards":{
+    "packCards": {
       "type": "array",
       "required": false
     },
-    "active":{
+    "active": {
       "type": "boolean",
       "required": true
     }
-
   },
   "validations": [],
   "relations": {
@@ -55,7 +54,8 @@
       "foreignKey": "questionId"
     }
   },
-  "acls": [{
+  "acls": [
+    {
       "accessType": "*",
       "principalType": "ROLE",
       "principalId": "$everyone",

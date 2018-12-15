@@ -29,7 +29,7 @@
       "model": "Group",
       "foreignKey": "teacherId"
     },
-	 "questionnaires": {
+    "questionnaires": {
       "type": "hasMany",
       "model": "Questionnaire",
       "foreignKey": "teacherId"
@@ -45,7 +45,8 @@
       "foreignKey": "teacherId"
     }
   },
-  "acls": [{
+  "acls": [
+    {
       "accessType": "*",
       "principalType": "ROLE",
       "principalId": "$everyone",

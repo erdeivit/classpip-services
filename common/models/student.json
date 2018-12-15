@@ -67,6 +67,11 @@
       "type": "hasAndBelongsToMany",
       "model": "Point",
       "foreignKey": "pointId"
+    },
+    "rewards": {
+      "type": "hasOne",
+      "model": "Reward",
+      "foreignKey": "id"
     }
   },
   "acls": [{

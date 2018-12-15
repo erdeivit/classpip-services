@@ -24,14 +24,14 @@
       "model": "Student",
       "foreignKey": "studentId"
     },
-    "collectionCards":{
+    "collectionCards": {
       "type": "hasAndBelongsToMany",
       "model": "CollectionCard",
-      "foreignKey":"collectionCardId"
+      "foreignKey": "collectionCardId"
     }
-
   },
-  "acls": [{
+  "acls": [
+    {
       "accessType": "*",
       "principalType": "ROLE",
       "principalId": "$everyone",
