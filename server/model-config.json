@@ -105,5 +105,9 @@
   "Card": {
     "dataSource": "db",
     "public": true
+  },
+  "Reward": {
+    "dataSource": "db",
+    "public": true
   }
 }
