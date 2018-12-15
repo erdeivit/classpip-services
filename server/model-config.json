@@ -109,5 +109,9 @@
   "Reward": {
     "dataSource": "db",
     "public": true
+  },
+  "Range": {
+    "dataSource": "db",
+    "public": true
   }
 }
