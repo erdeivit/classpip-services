@@ -11,11 +11,6 @@
       "type": "string",
       "required": true
     },
-    "image": {
-      "type": "string",
-      "dataType": "longtext",
-      "required": true
-    },
     "value": {
       "type": "number",
       "required": true
