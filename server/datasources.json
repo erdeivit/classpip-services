@@ -1,8 +1,12 @@
 {
   "db": {
     "name": "db",
+<<<<<<< HEAD
     "database": "memory"
 
+=======
+    "connector": "memory"
+>>>>>>> c5fd94261da1ee18ac15c9530a0b2fba23a6bd62
   },
   "emailDs": {
     "name": "emailDs",
