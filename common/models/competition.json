@@ -26,6 +26,10 @@
     "information": {
       "type": "string",
       "required": false
+    },
+    "automation": {
+      "type": "string",
+      "required": false
     }
   },
   "validations": [],
