@@ -1,46 +1,62 @@
 {
-  "name": "Group",
-  "plural": "groups",
+  "name": "Competition",
+  "plural": "competitions",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "mode": {
+      "type": "string",
+      "required": true
+    },
     "name": {
       "type": "string",
       "required": true
+    },
+    "numJourneys": {
+      "type": "number",
+      "required": true
+    },
+    "information": {
+      "type": "string",
+      "required": false
+    },
+    "automation": {
+      "type": "string",
+      "required": false
     }
   },
   "validations": [],
   "relations": {
-    "teacher": {
-      "type": "belongsTo",
-      "model": "Teacher",
-      "foreignKey": "teacherId"
+    "journeys": {
+      "type": "hasMany",
+      "model": "Journey",
+      "foreignKey": "competitionId"
     },
     "students": {
       "type": "hasAndBelongsToMany",
       "model": "Student",
       "foreignKey": "studentId"
     },
-    "collectionCards":{
-      "type": "hasAndBelongsToMany",
-      "model": "CollectionCard",
-      "foreignKey":"collectionCardId"
-    },
-    "competitions": {
-      "type": "hasMany",
-      "model": "Competition",
-      "foreignKey": "groupId"
-    },
     "teams": {
-      "type": "hasMany",
+      "type": "hasAndBelongsToMany",
       "model": "Team",
+      "foreignKey": "teamId"
+    },
+    "group": {
+      "type": "belongsTo",
+      "model": "Group",
       "foreignKey": "groupId"
     }
   },
-  "acls": [{
+  "acls": [
+    {
       "accessType": "*",
       "principalType": "ROLE",
       "principalId": "$everyone",
@@ -55,7 +71,7 @@
     {
       "accessType": "WRITE",
       "principalType": "ROLE",
-      "principalId": "$owner",
+      "principalId": "$authenticated",
       "permission": "ALLOW"
     }
   ],

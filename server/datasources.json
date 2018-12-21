@@ -1,10 +1,7 @@
 {
   "db": {
-    "host": "localhost",
-    "port": 3306,
-    "url": "",
-    "database": "memory"
-
+    "name": "db",
+    "connector": "memory"
   },
   "emailDs": {
     "name": "emailDs",

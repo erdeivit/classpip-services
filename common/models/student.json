@@ -67,6 +67,16 @@
       "type": "hasAndBelongsToMany",
       "model": "Point",
       "foreignKey": "pointId"
+    },
+    "competitions": {
+      "type": "hasAndBelongsToMany",
+      "model": "Competition",
+      "foreignKey": "competitionId"
+    },
+    "teams": {
+      "type": "hasAndBelongsToMany",
+      "model": "Team",
+      "foreignKey": "teamId"
     }
   },
   "acls": [{
