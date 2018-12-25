@@ -30,6 +30,10 @@
     "automation": {
       "type": "string",
       "required": false
+    },
+    "PointId": {
+      "type": "number",
+      "required": true
     }
   },
   "validations": [],
