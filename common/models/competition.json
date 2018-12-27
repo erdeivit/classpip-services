@@ -31,8 +31,8 @@
       "type": "string",
       "required": false
     },
-    "PointId": {
-      "type": "number",
+    "pointId": {
+      "type": "string",
       "required": true
     }
   },
@@ -59,8 +59,7 @@
       "foreignKey": "groupId"
     }
   },
-  "acls": [
-    {
+  "acls": [{
       "accessType": "*",
       "principalType": "ROLE",
       "principalId": "$everyone",
