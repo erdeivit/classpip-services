@@ -30,6 +30,10 @@
     "automation": {
       "type": "string",
       "required": false
+    },
+    "pointId": {
+      "type": "string",
+      "required": true
     }
   },
   "validations": [],
@@ -55,8 +59,7 @@
       "foreignKey": "groupId"
     }
   },
-  "acls": [
-    {
+  "acls": [{
       "accessType": "*",
       "principalType": "ROLE",
       "principalId": "$everyone",
