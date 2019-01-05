@@ -17,8 +17,8 @@
     },
     "image": {
       "type": "string",
-      "dataType": "longtext",
-      "required": false
+      "required": false,
+      "dataType": "longtext"
     },
     "time": {
       "type": "number",
@@ -43,7 +43,8 @@
       "foreignKey": "correctAnswerId"
     }
   },
-  "acls": [{
+  "acls": [
+    {
       "accessType": "*",
       "principalType": "ROLE",
       "principalId": "$everyone",

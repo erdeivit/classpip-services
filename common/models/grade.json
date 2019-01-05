@@ -25,7 +25,8 @@
       "foreignKey": "gradeId"
     }
   },
-  "acls": [{
+  "acls": [
+    {
       "accessType": "*",
       "principalType": "ROLE",
       "principalId": "$everyone",

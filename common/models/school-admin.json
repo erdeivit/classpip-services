@@ -30,7 +30,8 @@
       "foreignKey": "avatarId"
     }
   },
-  "acls": [{
+  "acls": [
+    {
       "accessType": "*",
       "principalType": "ROLE",
       "principalId": "$everyone",

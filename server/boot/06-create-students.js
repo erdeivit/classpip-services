@@ -12,7 +12,8 @@ module.exports = function (app, cb) {
     email: 'student-1@classpip.com',
     emailVerified: 1,
     schoolId: 1,
-    avatarId: 6
+    avatarId: 6,
+    profileImage: 'https://www.sacs.nsw.edu.au/wp-content/uploads/2018/08/SACS-Student-Profile-Bronte_Thumbnail-1000x1000.jpg'
   }, {
     id: 10001,
     username: 'student-2',
@@ -22,7 +23,8 @@ module.exports = function (app, cb) {
     email: 'student-2@classpip.com',
     emailVerified: 1,
     schoolId: 1,
-    avatarId: 6
+    avatarId: 6,
+    profileImage: 'http://www.princeofpeace.qld.edu.au/wp-content/uploads/2016/11/Year12Schwarting-Alexandra.jpg'
   }, {
     id: 10002,
     username: 'student-3',
@@ -32,7 +34,8 @@ module.exports = function (app, cb) {
     email: 'student-3@classpip.com',
     emailVerified: 1,
     schoolId: 2,
-    avatarId: 7
+    avatarId: 7,
+    profileImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqawgXiIk8xORYRUrOT-JicJfSGWC6aqYiCi2KYA1iAj331vmZ'
   }, {
     id: 10004,
     username: 'student-4',
@@ -42,7 +45,8 @@ module.exports = function (app, cb) {
     email: 'student-4@classpip.com',
     emailVerified: 1,
     schoolId: 2,
-    avatarId: 7
+    avatarId: 7,
+    profileImage: 'https://www.sacs.nsw.edu.au/wp-content/uploads/2018/06/Mackenzie-Callan-2.jpg'
   }, {
     id: 10005,
     username: 'student-5',
@@ -52,7 +56,8 @@ module.exports = function (app, cb) {
     email: 'student-5@classpip.com',
     emailVerified: 1,
     schoolId: 2,
-    avatarId: 6
+    avatarId: 6,
+    profileImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7WnsJ160401uLZCyO2-0lK3VDURpG4sQdUZAiKwPqetRUj_a6'
   }, {
     id: 10006,
     username: 'student-6',
@@ -62,7 +67,8 @@ module.exports = function (app, cb) {
     email: 'student-6@classpip.com',
     emailVerified: 1,
     schoolId: 2,
-    avatarId: 7
+    avatarId: 7,
+    profileImage: 'http://1.bp.blogspot.com/-KyWE2iOAR2g/Uke8IJA9HqI/AAAAAAAAAWc/_uRZI1_ahZM/s320/DSCF5340.JPG'
   }, {
     id: 10007,
     username: 'student-7',
@@ -72,7 +78,30 @@ module.exports = function (app, cb) {
     email: 'student-7@classpip.com',
     emailVerified: 1,
     schoolId: 2,
-    avatarId: 6
+    avatarId: 6,
+    profileImage: 'https://www.meteored.mx/css/images/new/redactor/martha-llanos.jpg'
+  }, {
+    id: 10008,
+    username: 'student-8',
+    password: 'student-8',
+    name: 'Paco',
+    surname: 'Porras',
+    email: 'student-8@classpip.com',
+    emailVerified: 1,
+    schoolId: 1,
+    avatarId: 4,
+    profileImage: 'https://i1.rgstatic.net/ii/profile.image/555525693349888-1509459054332_Q512/Sebastian_Llanos2.jpg'
+  }, {
+    id: 10009,
+    username: 'student-9',
+    password: 'student-9',
+    name: 'Pedro',
+    surname: 'Medario',
+    email: 'student-9@classpip.com',
+    emailVerified: 1,
+    schoolId: 1,
+    avatarId: 3,
+    profileImage: 'https://pbs.twimg.com/profile_images/865029967792529408/gzNyYn0v_400x400.jpg'
   }], function (err, students) {
     if (err) throw err;
 

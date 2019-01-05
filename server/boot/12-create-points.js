@@ -4,6 +4,7 @@ module.exports = function (app, cb) {
 
   app.models.Point.create([{
       name: 'Questionario',
+      image: 'https://www.survio.com/es/blog/wp-content/uploads/2017/03/logo-do-cta.png',
       value: '1',
       id: 100001,
       schoolId: 1,
@@ -11,18 +12,21 @@ module.exports = function (app, cb) {
     }, {
       id: 100002,
       name: 'Puntualidad',
+      image: 'https://cdn4.iconfinder.com/data/icons/business-marketing-and-management-round/128/35-512.png',
       value: '1',
       schoolId: 1,
       teacherId: 1000
     }, {
       id: 100003,
       name: 'Ejercicios',
+      image: 'https://cdn2.iconfinder.com/data/icons/education-e-learning/64/STUDY-512.png',
       value: '1',
       schoolId: 1,
       teacherId: 1000
     }, {
       id: 100004,
       name: 'Ayuda a Compañero',
+      image: 'https://cdn3.iconfinder.com/data/icons/basic-icons-5/64/FAQ-512.png',
       value: '1',
       schoolId: 1,
       teacherId: 1001
@@ -30,11 +34,13 @@ module.exports = function (app, cb) {
     {
       id: 100005,
       name: 'Progreso',
+      image: 'https://cdn3.iconfinder.com/data/icons/science-flat-round/512/charts_chart_graph_statistics_pie_analytics-512.png',
       value: '1',
       schoolId: 2,
       teacherId: 1003
     }, {
       name: 'Retraso',
+      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Out_of_date_clock_icon.svg/1024px-Out_of_date_clock_icon.svg.png',
       value: '-1',
       id: 100006,
       schoolId: 1,

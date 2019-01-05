@@ -43,14 +43,14 @@ module.exports = function (app, cb) {
 	  }, {
 		id: 2,
 		value: '1',
-		badgeId: 100000,
+		badgeId: 100002,
 		groupId: 1,
 		studentId: 10000,
 		schoolId: 1
 	  }, {
 		id: 3,
 		value: '1',
-		badgeId: 100000,
+		badgeId: 100003,
 		groupId: 1,
 		studentId: 10000,
 		schoolId: 1

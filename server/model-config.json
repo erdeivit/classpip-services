@@ -121,5 +121,13 @@
   "Team": {
     "dataSource": "db",
     "public": true
+  },
+  "Reward": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Range": {
+    "dataSource": "db",
+    "public": true
   }
 }

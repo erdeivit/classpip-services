@@ -11,6 +11,11 @@
       "type": "string",
       "required": true
     },
+    "image": {
+      "type": "string",
+      "required": true,
+      "dataType": "longtext"
+    },
     "value": {
       "type": "number",
       "required": true
