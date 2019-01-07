@@ -23,6 +23,11 @@
       "type": "hasMany",
       "model": "Group",
       "foreignKey": "matterId"
+    },
+    "schools": {
+      "type": "belongsTo",
+      "model": "School",
+      "foreignKey": "schoolId"
     }
   },
   "acls": [

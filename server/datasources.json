@@ -1,8 +1,7 @@
 {
   "db": {
     "name": "db",
-    "database": "memory"
-
+    "connector": "memory"
   },
   "emailDs": {
     "name": "emailDs",

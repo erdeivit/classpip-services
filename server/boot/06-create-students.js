@@ -134,25 +134,29 @@ module.exports = function (app, cb) {
                 name: 'Group 1',
                 teacherId: 1000,
                 gradeId: 1,
-                matterId: 1
+                matterId: 1,
+                schoolId: 1
               }, {
                 id: 2,
                 name: 'Group 2',
                 teacherId: 1000,
                 gradeId: 1,
-                matterId: 2
+                matterId: 2,
+                schoolId: 1
               }, {
                 id: 3,
                 name: 'Group 3',
                 teacherId: 1000,
                 gradeId: 2,
-                matterId: 1
+                matterId: 1,
+                schoolId: 1
               }, {
                 id: 4,
                 name: 'Group 4',
                 teacherId: 1001,
                 gradeId: 1,
-                matterId: 2
+                matterId: 2,
+                schoolId: 1
               }], function (err, groups) {
 
                 groups[0].students.add(students[0], function (err) {
