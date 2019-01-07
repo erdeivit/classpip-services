@@ -33,7 +33,7 @@ module.exports = function (app, cb) {
     surname: 'Macho',
     email: 'student-3@classpip.com',
     emailVerified: 1,
-    schoolId: 2,
+    schoolId: 1,
     avatarId: 7,
     profileImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqawgXiIk8xORYRUrOT-JicJfSGWC6aqYiCi2KYA1iAj331vmZ'
   }, {
@@ -44,7 +44,7 @@ module.exports = function (app, cb) {
     surname: 'Morales',
     email: 'student-4@classpip.com',
     emailVerified: 1,
-    schoolId: 2,
+    schoolId: 1,
     avatarId: 7,
     profileImage: 'https://www.sacs.nsw.edu.au/wp-content/uploads/2018/06/Mackenzie-Callan-2.jpg'
   }, {
@@ -55,7 +55,7 @@ module.exports = function (app, cb) {
     surname: 'Rojo',
     email: 'student-5@classpip.com',
     emailVerified: 1,
-    schoolId: 2,
+    schoolId: 1,
     avatarId: 6,
     profileImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7WnsJ160401uLZCyO2-0lK3VDURpG4sQdUZAiKwPqetRUj_a6'
   }, {
@@ -66,7 +66,7 @@ module.exports = function (app, cb) {
     surname: 'Alfonso',
     email: 'student-6@classpip.com',
     emailVerified: 1,
-    schoolId: 2,
+    schoolId: 1,
     avatarId: 7,
     profileImage: 'http://1.bp.blogspot.com/-KyWE2iOAR2g/Uke8IJA9HqI/AAAAAAAAAWc/_uRZI1_ahZM/s320/DSCF5340.JPG'
   }, {
@@ -77,7 +77,7 @@ module.exports = function (app, cb) {
     surname: 'Marchena',
     email: 'student-7@classpip.com',
     emailVerified: 1,
-    schoolId: 2,
+    schoolId: 1,
     avatarId: 6,
     profileImage: 'https://www.meteored.mx/css/images/new/redactor/martha-llanos.jpg'
   }, {

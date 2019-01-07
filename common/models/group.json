@@ -28,6 +28,11 @@
       "type": "hasAndBelongsToMany",
       "model": "CollectionCard",
       "foreignKey": "collectionCardId"
+    },
+    "schools": {
+      "type": "belongsTo",
+      "model": "School",
+      "foreignKey": "schoolId"
     }
   },
   "acls": [

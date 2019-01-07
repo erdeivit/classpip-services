@@ -86,6 +86,16 @@
       "type": "hasMany",
       "model": "Student",
       "foreignKey": "schoolId"
+    },
+    "grades": {
+      "type": "hasMany",
+      "model": "Grade",
+      "foreignKey": "gradeId"
+    },
+    "matters": {
+      "type": "hasMany",
+      "model": "matter",
+      "foreignKey": "matterId"
     }
   },
   "acls": [
