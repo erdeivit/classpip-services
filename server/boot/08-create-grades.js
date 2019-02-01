@@ -4,19 +4,23 @@ module.exports = function (app, cb) {
 
   app.models.Grade.create([{
     id: 1,
-    name: '1ero ESO'
+    name: '1ero ESO',
+    schoolId: 1
   }, {
     id: 2,
-    name: '2ndo ESO'
+    name: '2ndo ESO',
+    schoolId: 1
   }], function (err, grades) {
     if (err) throw err;
 
     app.models.Matter.create([{
       id: 1,
-      name: 'Matematicas'
+      name: 'Matematicas',
+      schoolId: 1
     }, {
       id: 2,
-      name: 'Catalan'
+      name: 'Catalan',
+      schoolId: 1
     }], function (err, matters) {
       if (err) throw err;
 

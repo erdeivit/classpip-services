@@ -86,10 +86,24 @@
       "type": "hasMany",
       "model": "Student",
       "foreignKey": "schoolId"
+    },
+    "grades": {
+      "type": "hasMany",
+      "model": "Grade",
+      "foreignKey": "schoolId"
+    },
+    "matters": {
+      "type": "hasMany",
+      "model": "Matter",
+      "foreignKey": "schoolId"
+    },
+    "ranges": {
+      "type": "hasMany",
+      "model": "Range",
+      "foreignKey": "schoolId"
     }
   },
-  "acls": [
-    {
+  "acls": [{
       "accessType": "*",
       "principalType": "ROLE",
       "principalId": "$everyone",
