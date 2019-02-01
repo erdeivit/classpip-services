@@ -96,6 +96,11 @@
       "type": "hasMany",
       "model": "Matter",
       "foreignKey": "schoolId"
+    },
+    "ranges": {
+      "type": "hasMany",
+      "model": "Range",
+      "foreignKey": "schoolId"
     }
   },
   "acls": [{
