@@ -323,7 +323,7 @@ module.exports = function (app, cb) {
       studentId: 10008,
       schoolId: 1
     }], function (err) {
-
+      if (err) throw err;
       process.nextTick(cb);
     });
   });
