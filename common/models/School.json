@@ -101,6 +101,11 @@
       "type": "hasMany",
       "model": "Range",
       "foreignKey": "schoolId"
+    },
+    "groups": {
+      "type": "hasMany",
+      "model": "Group",
+      "foreignKey": "schoolId"
     }
   },
   "acls": [{
