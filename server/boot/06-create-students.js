@@ -154,7 +154,7 @@ module.exports = function (app, cb) {
                 id: 4,
                 name: 'Group 4',
                 teacherId: 1001,
-                gradeId: 1,
+                gradeId: 2,
                 matterId: 2,
                 schoolId: 1
               }], function (err, groups) {
