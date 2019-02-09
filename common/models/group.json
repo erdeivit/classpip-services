@@ -14,7 +14,22 @@
   },
   "validations": [],
   "relations": {
-    "teacher": {
+    "school": {
+      "type": "belongsTo",
+      "model": "School",
+      "foreignKey": "schoolId"
+    },
+    "grades": {
+      "type": "belongsTo",
+      "model": "Grade",
+      "foreignKey": "gradeId"
+    },
+    "matters": {
+      "type": "belongsTo",
+      "model": "Matter",
+      "foreignKey": "matterId"
+    },
+    "teachers": {
       "type": "belongsTo",
       "model": "Teacher",
       "foreignKey": "teacherId"

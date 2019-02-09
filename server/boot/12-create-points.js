@@ -36,7 +36,7 @@ module.exports = function (app, cb) {
       name: 'Progreso',
       image: 'https://cdn3.iconfinder.com/data/icons/science-flat-round/512/charts_chart_graph_statistics_pie_analytics-512.png',
       value: '1',
-      schoolId: 2,
+      schoolId: 1,
       teacherId: 1003
     }, {
       name: 'Retraso',
@@ -323,7 +323,7 @@ module.exports = function (app, cb) {
       studentId: 10008,
       schoolId: 1
     }], function (err) {
-
+      if (err) throw err;
       process.nextTick(cb);
     });
   });
