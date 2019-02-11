@@ -6,7 +6,7 @@
   "options": {
     "validateUpsert": true
   },
-  "properties": {    
+  "properties": {
     "value": {
       "type": "number",
       "required": true
@@ -19,7 +19,7 @@
       "model": "Point",
       "foreignKey": "pointId"
     },
-	  "groups": {
+    "groups": {
       "type": "belongsTo",
       "model": "Group",
       "foreignKey": "groupId"
@@ -35,7 +35,8 @@
       "foreignKey": "studentId"
     }
   },
-  "acls": [{
+  "acls": [
+    {
       "accessType": "*",
       "principalType": "ROLE",
       "principalId": "$everyone",

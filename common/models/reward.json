@@ -1,27 +1,39 @@
 {
-  "name": "Answer",
-  "plural": "answers",
+  "name": "Reward",
   "base": "PersistedModel",
-  "idInjection": true,
+  "idInjection": false,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "name": {
-      "type": "string",
-      "required": true
+    "points": {
+      "type": "number"
+    },
+    "points_obj": {
+      "type": "string"
+    },
+    "badges_obj": {
+      "type": "string"
+    },
+    "level": {
+      "type": "number"
+    },
+    "next_level_points": {
+      "type": "number"
+    },
+    "rank": {
+      "type": "string"
     }
   },
   "validations": [],
   "relations": {
-    "question": {
+    "student": {
       "type": "belongsTo",
-      "model": "Question",
-      "foreignKey": "questionId"
+      "model": "Student",
+      "foreignKey": "id"
     }
   },
-  "acls": [
-    {
+  "acls": [{
       "accessType": "*",
       "principalType": "ROLE",
       "principalId": "$everyone",
@@ -36,7 +48,7 @@
     {
       "accessType": "WRITE",
       "principalType": "ROLE",
-      "principalId": "$everyone",
+      "principalId": "$owner",
       "permission": "ALLOW"
     }
   ],

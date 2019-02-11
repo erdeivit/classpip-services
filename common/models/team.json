@@ -1,6 +1,6 @@
 {
-  "name": "Answer",
-  "plural": "answers",
+  "name": "Team",
+  "plural": "teams",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -14,14 +14,23 @@
   },
   "validations": [],
   "relations": {
-    "question": {
+    "competitions": {
+      "type": "hasAndBelongsToMany",
+      "model": "Competition",
+      "foreignKey": "competitionId"
+    },
+    "students": {
+      "type": "hasAndBelongsToMany",
+      "model": "Student",
+      "foreignKey": "studentId"
+    },
+    "group": {
       "type": "belongsTo",
-      "model": "Question",
-      "foreignKey": "questionId"
+      "model": "Group",
+      "foreignKey": "groupId"
     }
   },
-  "acls": [
-    {
+  "acls": [{
       "accessType": "*",
       "principalType": "ROLE",
       "principalId": "$everyone",
@@ -30,13 +39,13 @@
     {
       "accessType": "READ",
       "principalType": "ROLE",
-      "principalId": "$everyone",
+      "principalId": "$authenticated",
       "permission": "ALLOW"
     },
     {
       "accessType": "WRITE",
       "principalType": "ROLE",
-      "principalId": "$everyone",
+      "principalId": "$authenticated",
       "permission": "ALLOW"
     }
   ],

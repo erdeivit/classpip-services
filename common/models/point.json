@@ -13,8 +13,8 @@
     },
     "image": {
       "type": "string",
-      "dataType": "longtext",
-      "required": true
+      "required": true,
+      "dataType": "longtext"
     },
     "value": {
       "type": "number",

@@ -1,23 +1,32 @@
 {
-  "name": "Answer",
-  "plural": "answers",
+  "name": "Match",
+  "plural": "matches",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "name": {
-      "type": "string",
+    "playerOne": {
+      "type": "number",
       "required": true
+    },
+    "playerTwo": {
+      "type": "number",
+      "required": true
+    },
+    "winner": {
+      "type": "number",
+      "required": false,
+      "default": 0
     }
   },
   "validations": [],
   "relations": {
-    "question": {
+    "journey": {
       "type": "belongsTo",
-      "model": "Question",
-      "foreignKey": "questionId"
+      "model": "Journey",
+      "foreignKey": "journeyId"
     }
   },
   "acls": [
@@ -30,13 +39,13 @@
     {
       "accessType": "READ",
       "principalType": "ROLE",
-      "principalId": "$everyone",
+      "principalId": "$authenticated",
       "permission": "ALLOW"
     },
     {
       "accessType": "WRITE",
       "principalType": "ROLE",
-      "principalId": "$everyone",
+      "principalId": "$authenticated",
       "permission": "ALLOW"
     }
   ],

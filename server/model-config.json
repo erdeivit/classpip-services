@@ -105,5 +105,29 @@
   "Card": {
     "dataSource": "db",
     "public": true
+  },
+  "Competition": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Journey": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Match": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Team": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Reward": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Range": {
+    "dataSource": "db",
+    "public": true
   }
 }

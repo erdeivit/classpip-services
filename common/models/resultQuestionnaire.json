@@ -38,7 +38,6 @@
       "type": "string",
       "required": true
     }
-
   },
   "validations": [],
   "relations": {
@@ -53,7 +52,8 @@
       "foreignKey": "studentId"
     }
   },
-  "acls": [{
+  "acls": [
+    {
       "accessType": "*",
       "principalType": "ROLE",
       "principalId": "$everyone",

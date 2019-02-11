@@ -1,45 +1,65 @@
 {
-  "name": "Card",
-  "plural": "cards",
+  "name": "Competition",
+  "plural": "competitions",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "mode": {
+      "type": "string",
+      "required": true
+    },
     "name": {
       "type": "string",
       "required": true
     },
-    "image": {
-      "type": "string",
-      "required": true,
-      "dataType": "longtext"
-    },
-    "ratio": {
-      "type": "string",
+    "numJourneys": {
+      "type": "number",
       "required": true
     },
-    "rank": {
+    "information": {
+      "type": "string",
+      "required": false
+    },
+    "automation": {
+      "type": "string",
+      "required": false
+    },
+    "pointId": {
       "type": "string",
       "required": true
     }
   },
   "validations": [],
   "relations": {
-    "collectionCards": {
-      "type": "belongsTo",
-      "model": "CollectionCard",
-      "foreignKey": "collectionCardId"
+    "journeys": {
+      "type": "hasMany",
+      "model": "Journey",
+      "foreignKey": "competitionId"
     },
     "students": {
       "type": "hasAndBelongsToMany",
       "model": "Student",
       "foreignKey": "studentId"
+    },
+    "teams": {
+      "type": "hasAndBelongsToMany",
+      "model": "Team",
+      "foreignKey": "teamId"
+    },
+    "group": {
+      "type": "belongsTo",
+      "model": "Group",
+      "foreignKey": "groupId"
     }
   },
-  "acls": [
-    {
+  "acls": [{
       "accessType": "*",
       "principalType": "ROLE",
       "principalId": "$everyone",
@@ -48,13 +68,13 @@
     {
       "accessType": "READ",
       "principalType": "ROLE",
-      "principalId": "$everyone",
+      "principalId": "$authenticated",
       "permission": "ALLOW"
     },
     {
       "accessType": "WRITE",
       "principalType": "ROLE",
-      "principalId": "$everyone",
+      "principalId": "$authenticated",
       "permission": "ALLOW"
     }
   ],

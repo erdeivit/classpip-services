@@ -5,7 +5,7 @@ module.exports = function (app, cb) {
   app.models.Card.create([{
     id: 1,
     name: 'Ter Stegen',
-    image: 'https://www.blaugranas.com/media/galeria/25/8/0/2/4/n_f_c_barcelona_marc_andre_ter_stegen-11144208.jpeg',
+    image: 'https://www.lavanguardia.com/r/GODO/LV/p5/WebSite/2018/09/08/Recortada/20180819-636702345783263152_20180819001843584-kadH-U451706254151rdB-992x558@LaVanguardia-Web.jpg',
     ratio: 'bajo',
     rank: 'oro',
     collectionCardId: 1
@@ -75,7 +75,7 @@ module.exports = function (app, cb) {
   }, {
     id: 11,
     name: 'Rafinha',
-    image: 'https://i.nextmedia.com.au/Utils/ImageResizer.ashx?n=http%3A%2F%2Fi.nextmedia.com.au%2Ffourfourtwo%2Frafinha-cropped_1w4nsaq4dn19r1odjp52omaf4f.jpg&h=630&w=1120&c=1&s=1',
+    image: 'https://fcbarcelona-static-files.s3.amazonaws.com/fcbarcelona/photo/2018/10/09/891014b3-68ab-4eb8-b48a-14912f54c28f/Rafinha-Hero-2018-19.png',
     ratio: 'medio',
     rank: 'plata',
     collectionCardId: 1
@@ -170,12 +170,11 @@ module.exports = function (app, cb) {
     ratio: 'raro',
     rank: 'diamante',
     collectionCardId: 2
-  }
-  ], function (err) {
+  }], function (err) {
     if (err) throw err;
     process.nextTick(cb);
   });
-app.models.CollectionCard.create([{
+  app.models.CollectionCard.create([{
 
     id: 1,
     name: 'Jugadores FC Barcelona',
@@ -189,8 +188,9 @@ app.models.CollectionCard.create([{
     id: 2,
     name: 'Jugadores Real Madrid CF',
     image: 'https://upload.wikimedia.org/wikipedia/ca/c/c0/Reial_Madrid.png',
-    num: 25,
+    num: 4,
     createdBy: "teacher-1",
-    teacherId: 1000
-  }
-])};
+    teacherId: 1000,
+    badgeId: 100002
+  }])
+};

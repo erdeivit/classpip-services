@@ -13,8 +13,8 @@
     },
     "image": {
       "type": "string",
-      "dataType": "longtext",
-      "required": true
+      "required": true,
+      "dataType": "longtext"
     },
     "num": {
       "type": "string",
@@ -24,7 +24,7 @@
       "type": "string",
       "required": true
     },
-    "badgeId":{
+    "badgeId": {
       "type": "string",
       "required": false
     }
@@ -46,18 +46,19 @@
       "model": "Student",
       "foreignKey": "studentId"
     },
-    "groups":{
+    "groups": {
       "type": "hasAndBelongsToMany",
       "model": "Group",
       "foreignKey": "groupId"
     }
   },
-  "acls": [{
-    "accessType": "*",
-    "principalType": "ROLE",
-    "principalId": "$everyone",
-    "permission": "DENY"
-  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
     {
       "accessType": "READ",
       "principalType": "ROLE",
