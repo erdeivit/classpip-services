@@ -16,7 +16,9 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(loopback.token());
 
 // configure body parser
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 
 app.start = function () {
   // start the web server
