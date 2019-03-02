@@ -44,7 +44,7 @@
   },
   "validations": [],
   "relations": {
-    "questionnaires": {
+    "questionnaire": {
       "type": "hasAndBelongsToMany",
       "model": "Questionnaire",
       "foreignKey": "questionnaireId"
@@ -54,7 +54,7 @@
       "accessType": "*",
       "principalType": "ROLE",
       "principalId": "$everyone",
-      "permission": "DENY"
+      "permission": "ALLOW"
     },
     {
       "accessType": "READ",

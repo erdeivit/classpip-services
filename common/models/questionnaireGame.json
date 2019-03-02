@@ -53,7 +53,7 @@
       "foreignKey": "teacherId"
     },
     "questionnaire": {
-      "type": "hasAndBelongsToMany",
+      "type": "belongsTo",
       "model": "Questionnaire",
       "foreignKey": "questionnaireId"
     }
