@@ -28,7 +28,7 @@
       "foreignKey": "questionId"
     },
     "questionnaireGame": {
-      "type": "hasMany",
+      "type": "hasAndBelongsToMany",
       "model": "QuestionnaireGame",
       "foreignKey": "questionnaireGameId"
     }

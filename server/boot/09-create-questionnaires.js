@@ -179,13 +179,13 @@ module.exports = function (app, cb) {
           ], function (err, questions) {
             if (err) throw err;
             // Assign correct answers to questions
-            questionnaires[0].question.add(questions[0], function (err) {
+            questionnaires[0].quest.add(questions[0], function (err) {
               if (err) throw err;
-              questionnaires[1].question.add(questions[1], function (err) {
+              questionnaires[1].quest.add(questions[1], function (err) {
                 if (err) throw err;
-                questionnaires[2].question.add(questions[2], function (err) {
+                questionnaires[2].quest.add(questions[2], function (err) {
                   if (err) throw err;
-                  questionnaires[3].question.add(questions[3], function (err) {
+                  questionnaires[3].quest.add(questions[3], function (err) {
                     if (err) throw err;
                     process.nextTick(cb);
                   });
