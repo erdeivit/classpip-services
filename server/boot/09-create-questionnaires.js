@@ -45,7 +45,6 @@ module.exports = function (app, cb) {
         if (err) throw err;
         questionnaireGames[1].questionnaire.add(questionnaires[1], function (err) {
           if (err) throw err;
-          process.nextTick(cb);
           app.models.Question.create([{
               id: 1,
               statement: '2+2 = ?',
@@ -176,18 +175,30 @@ module.exports = function (app, cb) {
               explanation: 'La resta de 20-11 siempre da 9.',
               questionnaireId: ['1', '2']
             }
-          ], function (err, questions) {
+          ], function (err, q) {
             if (err) throw err;
             // Assign correct answers to questions
-            questionnaires[0].quest.add(questions[0], function (err) {
+            questionnaires[0].question.add(q[0], function (err) {
               if (err) throw err;
-              questionnaires[1].quest.add(questions[1], function (err) {
+              questionnaires[0].question.add(q[1], function (err) {
                 if (err) throw err;
-                questionnaires[2].quest.add(questions[2], function (err) {
+                questionnaires[0].question.add(q[2], function (err) {
                   if (err) throw err;
-                  questionnaires[3].quest.add(questions[3], function (err) {
+                  questionnaires[0].question.add(q[3], function (err) {
                     if (err) throw err;
-                    process.nextTick(cb);
+                    questionnaires[0].question.add(q[4], function (err) {
+                      if (err) throw err;
+                      questionnaires[1].question.add(q[2], function (err) {
+                        if (err) throw err;
+                        questionnaires[1].question.add(q[3], function (err) {
+                          if (err) throw err;
+                          questionnaires[1].question.add(q[4], function (err) {
+                            if (err) throw err;
+                            process.nextTick(cb);
+                          });
+                        });
+                      });
+                    });
                   });
                 });
               });
