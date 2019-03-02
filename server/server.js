@@ -33,6 +33,8 @@ app.start = function () {
       /* eslint-disable */
       console.log('Browse your REST API at %s%s', baseUrl, explorerPath);
       /* eslint-enable */
+
+
     }
   });
 };

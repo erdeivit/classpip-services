@@ -36,7 +36,12 @@
     "questionnaires": {
       "type": "hasMany",
       "model": "Questionnaire",
-      "foreignKey": "teacherId"
+      "foreignKey": "questionnaireId"
+    },
+    "questionnairesGame": {
+      "type": "hasMany",
+      "model": "QuestionnaireGame",
+      "foreignKey": "questionnaireGameId"
     },
     "avatar": {
       "type": "belongsTo",
@@ -49,8 +54,7 @@
       "foreignKey": "teacherId"
     }
   },
-  "acls": [
-    {
+  "acls": [{
       "accessType": "*",
       "principalType": "ROLE",
       "principalId": "$everyone",

@@ -58,11 +58,11 @@
     "dataSource": "db",
     "public": true
   },
-  "Question": {
+  "QuestionnaireGame": {
     "dataSource": "db",
     "public": true
   },
-  "Answer": {
+  "Question": {
     "dataSource": "db",
     "public": true
   },

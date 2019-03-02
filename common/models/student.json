@@ -37,10 +37,10 @@
       "model": "Avatar",
       "foreignKey": "avatarId"
     },
-    "questionnaires": {
+    "questionnaireGame": {
       "type": "hasMany",
-      "model": "Questionnaire",
-      "foreignKey": "studentId"
+      "model": "QuestionnaireGame",
+      "foreignKey": "questionnaireGameId"
     },
     "badges": {
       "type": "hasAndBelongsToMany",

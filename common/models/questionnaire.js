@@ -1,5 +1,5 @@
 'use strict';
 
 /* eslint-disable */
-module.exports = function (Questionnaire) {};
+module.exports = function (questionnaire) {};
 /* eslint-enable */

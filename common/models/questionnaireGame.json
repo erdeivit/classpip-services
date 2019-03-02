@@ -1,6 +1,6 @@
 {
-  "name": "Questionnaire",
-  "plural": "Questionnaires",
+  "name": "QuestionnaireGame",
+  "plural": "QuestionnaireGames",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -11,26 +11,51 @@
       "type": "string",
       "required": true
     },
-    "description": {
-      "type": "string",
+    "start_date": {
+      "type": "date",
       "required": false
     },
-    "image": {
-      "type": "string",
+    "finish_date": {
+      "type": "date",
+      "required": false
+    },
+    "question_time": {
+      "type": "number",
+      "required": false
+    },
+    "questionnaire_time": {
+      "type": "number",
+      "required": false
+    },
+    "results": {
+      "type": {},
+      "required": false
+    },
+    "points": {
+      "type": "array",
+      "required": false
+    },
+    "prizes": {
+      "type": "array",
       "required": false
     }
   },
   "validations": [],
   "relations": {
-    "question": {
+    "students": {
       "type": "hasAndBelongsToMany",
-      "model": "Question",
-      "foreignKey": "questionId"
+      "model": "Student",
+      "foreignKey": "studentId"
     },
-    "questionnaireGame": {
+    "teacher": {
+      "type": "belongsTo",
+      "model": "Teacher",
+      "foreignKey": "teacherId"
+    },
+    "questionnaire": {
       "type": "hasAndBelongsToMany",
-      "model": "QuestionnaireGame",
-      "foreignKey": "questionnaireGameId"
+      "model": "Questionnaire",
+      "foreignKey": "questionnaireId"
     }
   },
   "acls": [{
