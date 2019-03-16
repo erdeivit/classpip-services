@@ -48,6 +48,11 @@
       "type": "hasAndBelongsToMany",
       "model": "Questionnaire",
       "foreignKey": "questionnaireId"
+    },
+    "teacher": {
+      "type": "belongsTo",
+      "model": "Teacher",
+      "foreignKey": "teacherId"
     }
   },
   "acls": [{

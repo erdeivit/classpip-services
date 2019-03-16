@@ -33,15 +33,20 @@
       "model": "Group",
       "foreignKey": "teacherId"
     },
-    "questionnaires": {
-      "type": "hasMany",
-      "model": "Questionnaire",
-      "foreignKey": "questionnaireId"
-    },
     "questionnairesGame": {
       "type": "hasMany",
       "model": "QuestionnaireGame",
       "foreignKey": "questionnaireGameId"
+    },
+    "questionnaire": {
+      "type": "hasMany",
+      "model": "Questionnaire",
+      "foreignKey": "teacherId"
+    },
+    "question": {
+      "type": "hasMany",
+      "model": "Question",
+      "foreignKey": "teacherId"
     },
     "avatar": {
       "type": "belongsTo",
@@ -58,7 +63,7 @@
       "accessType": "*",
       "principalType": "ROLE",
       "principalId": "$everyone",
-      "permission": "DENY"
+      "permission": "ALLOW"
     },
     {
       "accessType": "READ",

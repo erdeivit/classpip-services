@@ -9,8 +9,8 @@ module.exports = function (app, cb) {
     finish_date: '2019-04-02T13:10:27.162Z',
     question_time: '15',
     questionnaire_time: '150',
-    studentId: ["100000", "100001"],
-    teacherId: "1000"
+    studentId: [100000, 100001],
+    teacherId: 1000
   }, {
     id: 2,
     name: 'El juego de las restas',
@@ -18,8 +18,8 @@ module.exports = function (app, cb) {
     finish_date: '2019-05-02T13:10:27.162Z',
     question_time: '10',
     questionnaire_time: '100',
-    studentId: ["100000", "100001"],
-    teacherId: "1000"
+    studentId: [100000, 100001],
+    teacherId: 1000
 
   }], function (err, questionnaireGames) {
     if (err) throw err;
@@ -29,15 +29,16 @@ module.exports = function (app, cb) {
       name: 'Mates primer trimestre.',
       description: 'Vamos a repasar todo lo visto en la semana',
       image: 'http://www.mondalua.com/wp-content/uploads/2013/09/Mates-500x281.jpg',
-      questionId: ["1", "2", "3", "4", "5"],
-      questionnaireGameId: "1"
+      questionId: [1, 2, 3, 4, 5],
+      questionnaireGameId: 1,
+      teacherId: 1000
     }, {
       id: 2,
       name: 'Aprendemos a restar.',
       description: 'Vamos a practicar restas',
       image: 'https://matematicasmodernas.com/wp-content/uploads/2014/09/Resta-de-vectores.jpg',
-      questionId: ["3", "4", "5"],
-      questionnaireGameId: "2"
+      questionId: [3, 4, 5],
+      teacherId: 1000
     }], function (err, questionnaires) {
       if (err) throw err;
       // Assign questionnaires to the questionnairesGame
@@ -69,7 +70,8 @@ module.exports = function (app, cb) {
               difficulty: 'easy',
               category: 'operations',
               explanation: 'La suma de 2+2 siempre da 4.',
-              questionnaireId: ['1']
+              questionnaireId: 1,
+              teacherId: 1000
             },
             {
               id: 2,
@@ -95,7 +97,8 @@ module.exports = function (app, cb) {
               difficulty: 'medium',
               category: 'operations',
               explanation: 'La suma de 9+4 siempre da 13.',
-              questionnaireId: ['1']
+              questionnaireId: 1,
+              teacherId: 1000
             },
             {
               id: 3,
@@ -121,7 +124,8 @@ module.exports = function (app, cb) {
               difficulty: 'hard',
               category: 'operations',
               explanation: 'La resta de 10-6 siempre da 4.',
-              questionnaireId: ['1', '2']
+              questionnaireId: [1, 2],
+              teacherId: 1000
             },
             {
               id: 4,
@@ -147,7 +151,8 @@ module.exports = function (app, cb) {
               difficulty: 'hard',
               category: 'operations',
               explanation: 'La resta de 100-39 siempre da 61.',
-              questionnaireId: ['1', '2']
+              questionnaireId: [1, 2],
+              teacherId: 1000
             },
             {
               id: 5,
@@ -173,7 +178,8 @@ module.exports = function (app, cb) {
               difficulty: 'medium',
               category: 'operations',
               explanation: 'La resta de 20-11 siempre da 9.',
-              questionnaireId: ['1', '2']
+              questionnaireId: [1, 2],
+              teacherId: 1000
             }
           ], function (err, q) {
             if (err) throw err;

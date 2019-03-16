@@ -25,12 +25,17 @@
     "question": {
       "type": "hasAndBelongsToMany",
       "model": "Question",
-      "foreignKey": "questionId"
+      "foreignKey": "teacherId"
     },
     "questionnaireGame": {
       "type": "hasAndBelongsToMany",
       "model": "QuestionnaireGame",
       "foreignKey": "questionnaireGameId"
+    },
+    "teacher": {
+      "type": "belongsTo",
+      "model": "Teacher",
+      "foreignKey": "teacherId"
     }
   },
   "acls": [{
