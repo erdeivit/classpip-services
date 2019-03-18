@@ -11,31 +11,46 @@
       "type": "string",
       "required": true
     },
-    "answers": {
-      "type": {
-        "answer": {
-          "type": "string",
-          "required": true
-        },
-        "correct": {
-          "type": "boolean",
-          "required": true
-        }
-      },
+    "answer1": {
+      "type": "string",
       "required": true
+    },
+    "answer2": {
+      "type": "string",
+      "required": false
+    },
+    "answer3": {
+      "type": "string",
+      "required": false
+    },
+    "answer4": {
+      "type": "string",
+      "required": false
+    },
+    "answer5": {
+      "type": "string",
+      "required": false
+    },
+    "answer6": {
+      "type": "string",
+      "required": false
+    },
+    "correctanswer": {
+      "type": "string",
+      "required": false
     },
     "image": {
       "type": "string",
-      "required": true,
+      "required": false,
       "datatype": "longtext"
     },
     "difficulty": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "category": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "explanation": {
       "type": "string",

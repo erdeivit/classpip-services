@@ -49,23 +49,11 @@ module.exports = function (app, cb) {
           app.models.Question.create([{
               id: 1,
               statement: '2+2 = ?',
-              answers: [{
-                  answer: "2",
-                  correct: false
-                },
-                {
-                  answer: "4",
-                  correct: true
-                },
-                {
-                  answer: "6",
-                  correct: false
-                },
-                {
-                  answer: "8",
-                  correct: false
-                }
-              ],
+              answer1: "2",
+              answer2: "4",
+              answer3: "6",
+              answer4: "8",
+              correctanswer: "2",
               image: 'https://respuestas.tips/wp-content/uploads/2013/07/suma.jpg',
               difficulty: 'easy',
               category: 'operations',
@@ -76,23 +64,11 @@ module.exports = function (app, cb) {
             {
               id: 2,
               statement: '9+4 = ?',
-              answers: [{
-                  answer: "11",
-                  correct: false
-                },
-                {
-                  answer: "15",
-                  correct: false
-                },
-                {
-                  answer: "13",
-                  correct: true
-                },
-                {
-                  answer: "3",
-                  correct: false
-                }
-              ],
+              answer1: "11",
+              answer2: "13",
+              answer3: "15",
+              answer4: "12",
+              correctanswer: "2",
               image: 'https://matematicasmodernas.com/wp-content/uploads/2014/07/suma-de-vectores-por-componentes.jpg',
               difficulty: 'medium',
               category: 'operations',
@@ -103,23 +79,11 @@ module.exports = function (app, cb) {
             {
               id: 3,
               statement: '10-6 = ?',
-              answers: [{
-                  answer: "7",
-                  correct: false
-                },
-                {
-                  answer: "0",
-                  correct: false
-                },
-                {
-                  answer: "16",
-                  correct: false
-                },
-                {
-                  answer: "4",
-                  correct: true
-                }
-              ],
+              answer1: "7",
+              answer2: "0",
+              answer3: "16",
+              answer4: "4",
+              correctanswer: "4",
               image: 'https://matematicasmodernas.com/wp-content/uploads/2014/09/Resta-de-vectores.jpg',
               difficulty: 'hard',
               category: 'operations',
@@ -130,23 +94,11 @@ module.exports = function (app, cb) {
             {
               id: 4,
               statement: '100-39 = ?',
-              answers: [{
-                  answer: "61",
-                  correct: true
-                },
-                {
-                  answer: "50",
-                  correct: false
-                },
-                {
-                  answer: "90",
-                  correct: false
-                },
-                {
-                  answer: "60",
-                  correct: false
-                }
-              ],
+              answer1: "61",
+              answer2: "50",
+              answer3: "139",
+              answer4: "60",
+              correctanswer: "1",
               image: 'https://matematicasmodernas.com/wp-content/uploads/2014/09/Resta-de-vectores.jpg',
               difficulty: 'hard',
               category: 'operations',
@@ -157,23 +109,11 @@ module.exports = function (app, cb) {
             {
               id: 5,
               statement: '20-11= ?',
-              answers: [{
-                  answer: "10",
-                  correct: false
-                },
-                {
-                  answer: "9",
-                  correct: true
-                },
-                {
-                  answer: "8",
-                  correct: false
-                },
-                {
-                  answer: "11",
-                  correct: false
-                }
-              ],
+              answer1: "7",
+              answer2: "8",
+              answer3: "9",
+              answer4: "10",
+              correctanswer: "3",
               image: 'https://matematicasmodernas.com/wp-content/uploads/2014/09/Resta-de-vectores.jpg',
               difficulty: 'medium',
               category: 'operations',
