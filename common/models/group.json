@@ -53,6 +53,11 @@
       "type": "hasMany",
       "model": "Team",
       "foreignKey": "groupId"
+    },
+    "questionnaireGame": {
+      "type": "hasMany",
+      "model": "QuestionnaireGame",
+      "foreignKey": "groupId"
     }
   },
   "acls": [{

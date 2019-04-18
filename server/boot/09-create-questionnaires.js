@@ -9,7 +9,7 @@ module.exports = function (app, cb) {
     finish_date: '2019-04-02T13:10:27.162Z',
     question_time: '15',
     questionnaire_time: '150',
-    studentId: [100000, 100001],
+    groupId: 1,
     teacherId: 1000
   }, {
     id: 2,
@@ -18,7 +18,7 @@ module.exports = function (app, cb) {
     finish_date: '2019-05-02T13:10:27.162Z',
     question_time: '10',
     questionnaire_time: '100',
-    studentId: [100000, 100001],
+    groupId: 2,
     teacherId: 1000
 
   }], function (err, questionnaireGames) {
@@ -38,6 +38,7 @@ module.exports = function (app, cb) {
       description: 'Vamos a practicar restas',
       image: 'https://matematicasmodernas.com/wp-content/uploads/2014/09/Resta-de-vectores.jpg',
       questionId: [3, 4, 5],
+      questionnaireGameId: 2,
       teacherId: 1000
     }], function (err, questionnaires) {
       if (err) throw err;

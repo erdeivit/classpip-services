@@ -42,10 +42,10 @@
   },
   "validations": [],
   "relations": {
-    "students": {
+    "group": {
       "type": "hasAndBelongsToMany",
-      "model": "Student",
-      "foreignKey": "studentId"
+      "model": "Group",
+      "foreignKey": "groupId"
     },
     "teacher": {
       "type": "belongsTo",
