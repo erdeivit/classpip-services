@@ -38,6 +38,14 @@
     "prizes": {
       "type": "array",
       "required": false
+    },
+    "gameMode": {
+      "type": "string",
+      "required": true
+    },
+    "teamMode": {
+      "type": "number",
+      "required": true
     }
   },
   "validations": [],

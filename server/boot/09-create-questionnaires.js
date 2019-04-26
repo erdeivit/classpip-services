@@ -10,7 +10,9 @@ module.exports = function (app, cb) {
     question_time: '15',
     questionnaire_time: '150',
     groupId: 1,
-    teacherId: 1000
+    teacherId: 1000,
+    gameMode: 'Quizpip',
+    teamMode: 0
   }, {
     id: 2,
     name: 'El juego de las restas',
@@ -19,7 +21,9 @@ module.exports = function (app, cb) {
     question_time: '10',
     questionnaire_time: '100',
     groupId: 2,
-    teacherId: 1000
+    teacherId: 1000,
+    gameMode: '1by1',
+    teamMode: 1
 
   }], function (err, questionnaireGames) {
     if (err) throw err;
