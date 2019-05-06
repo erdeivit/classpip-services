@@ -20,7 +20,7 @@ module.exports = function (app, cb) {
       finish_date: '2019-05-02T13:10:27.162Z',
       question_time: '10',
       questionnaire_time: '100',
-      groupId: 1,
+      groupId: 2,
       teacherId: 1000,
       gameMode: '1by1',
       teamMode: 1
@@ -33,7 +33,7 @@ module.exports = function (app, cb) {
       finish_date: '2019-05-02T13:10:27.162Z',
       question_time: '10',
       questionnaire_time: '100',
-      groupId: 2,
+      groupId: 1,
       teacherId: 1000,
       gameMode: 'Quizpip',
       teamMode: 0
@@ -190,6 +190,8 @@ module.exports = function (app, cb) {
                 statement: 'Cuanto es -3^2',
                 answer1: "9",
                 answer2: "-9",
+                answer3: "6",
+                answer4: "-6",
                 correctanswer: "1",
                 image: 'https://es-static.z-dn.net/files/dbb/0f6b68bdb84c4bbc16cf532d5c19865c.jpg',
                 difficulty: 'high',
