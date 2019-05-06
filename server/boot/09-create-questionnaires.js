@@ -20,7 +20,7 @@ module.exports = function (app, cb) {
       finish_date: '2019-05-02T13:10:27.162Z',
       question_time: '10',
       questionnaire_time: '100',
-      groupId: 2,
+      groupId: 1,
       teacherId: 1000,
       gameMode: '1by1',
       teamMode: 1
@@ -36,7 +36,7 @@ module.exports = function (app, cb) {
       groupId: 2,
       teacherId: 1000,
       gameMode: 'Quizpip',
-      teamMode: 1
+      teamMode: 0
 
     }
   ], function (err, questionnaireGames) {
@@ -62,8 +62,8 @@ module.exports = function (app, cb) {
       id: 3,
       name: 'Potencias.',
       description: 'Vamos a practicar potencias',
-      image: 'https://matematicasmodernas.com/wp-content/uploads/2014/09/Resta-de-vectores.jpg',
-      questionId: 6,
+      image: 'https://cdnblog-199133.c.cdn77.org/blog/wp-content/uploads/potenicas.png',
+      questionId: [6, 7, 8],
       questionnaireGameId: 3,
       teacherId: 1000
     }], function (err, questionnaires) {
@@ -164,10 +164,37 @@ module.exports = function (app, cb) {
                 answer3: "+4",
                 answer4: "-4",
                 correctanswer: "1,2",
-                image: 'https://matematicasmodernas.com/wp-content/uploads/2014/09/Resta-de-vectores.jpg',
+                image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Racine_carr%C3%A9e_bleue.svg/220px-Racine_carr%C3%A9e_bleue.svg.png',
                 difficulty: 'high',
                 category: 'power',
                 explanation: 'La raiz siempre nos da dos valores. +-2',
+                questionnaireId: 3,
+                teacherId: 1000,
+                type: "multianswer"
+              },
+              {
+                id: 7,
+                statement: 'Cuanto es 2^3',
+                answer1: "8",
+                correctanswer: "1",
+                image: 'https://static.escolakids.uol.com.br/conteudo_legenda/81f0bcf8fd3124a9d0eb33048107bc8c.jpg',
+                difficulty: 'high',
+                category: 'power',
+                explanation: '2x2x2 = 8',
+                questionnaireId: 3,
+                teacherId: 1000,
+                type: "openAnswer"
+              },
+              {
+                id: 8,
+                statement: 'Cuanto es -3^2',
+                answer1: "9",
+                answer2: "-9",
+                correctanswer: "1",
+                image: 'https://es-static.z-dn.net/files/dbb/0f6b68bdb84c4bbc16cf532d5c19865c.jpg',
+                difficulty: 'high',
+                category: 'power',
+                explanation: '(-3)*(-3) = 9',
                 questionnaireId: 3,
                 teacherId: 1000,
                 type: "classic"
@@ -193,7 +220,13 @@ module.exports = function (app, cb) {
                               if (err) throw err;
                               questionnaires[2].question.add(q[5], function (err) {
                                 if (err) throw err;
-                                process.nextTick(cb);
+                                questionnaires[2].question.add(q[6], function (err) {
+                                  if (err) throw err;
+                                  questionnaires[2].question.add(q[7], function (err) {
+                                    if (err) throw err;
+                                    process.nextTick(cb);
+                                  });
+                                });
                               });
                             });
                           });
