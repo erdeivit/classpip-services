@@ -81,6 +81,11 @@
       "type": "hasOne",
       "model": "Reward",
       "foreignKey": "id"
+    },
+    "resultquestionnaire": {
+      "type": "hasMany",
+      "model": "resultQuestionnaire",
+      "foreignKey": "studentId"
     }
   },
   "acls": [{

@@ -5,50 +5,53 @@ module.exports = function (app, cb) {
   app.models.QuestionnaireGame.create([{
       id: 1,
       name: 'El juego de la semana. "QuizPip"',
-      start_date: '2019-03-02T13:10:27.162Z',
-      finish_date: '2019-04-02T13:10:27.162Z',
+      start_date: 1559243180685,
+      finish_date: 1559254180685,
       question_time: '15',
       questionnaire_time: '150',
       groupId: 1,
       teacherId: 1000,
       gameMode: 'QuizPip',
-      teamMode: 0
+      teamMode: 0,
+      questionnaireId: 1
     }, {
       id: 2,
       name: 'El juego de las restas. "1by1"',
-      start_date: '2019-03-02T13:10:27.162Z',
-      finish_date: '2019-05-02T13:10:27.162Z',
+      start_date: 1559154880685,
+      finish_date: 1559253180685,
       question_time: '10',
       questionnaire_time: '100',
       groupId: 1,
       teacherId: 1000,
       gameMode: '1by1',
-      teamMode: 1
-
+      teamMode: 1,
+      questionnaireId: 2
     },
     {
       id: 3,
       name: 'Potenciame. "1by" all poss',
-      start_date: '2019-03-02T13:10:27.162Z',
-      finish_date: '2019-05-02T13:10:27.162Z',
+      start_date: 1559153180685,
+      finish_date: 1599235691275,
       question_time: '10',
       questionnaire_time: '100',
       groupId: 1,
       teacherId: 1000,
       gameMode: '1by1',
-      teamMode: 0
+      teamMode: 0,
+      questionnaireId: 3
     },
     {
       id: 4,
       name: 'Capitales de provincias de España',
-      start_date: '2019-05-14T13:10:27.162Z',
-      finish_date: '2019-05-02T13:10:27.162Z',
+      start_date: 1559254980685,
+      finish_date: 1560254180685,
       question_time: '10',
       questionnaire_time: '100',
       groupId: 1,
       teacherId: 1000,
       gameMode: 'FlipcardsPip',
-      teamMode: 0
+      teamMode: 0,
+      questionnaireId: 4
     }
   ], function (err, questionnaireGames) {
     if (err) throw err;
@@ -59,7 +62,6 @@ module.exports = function (app, cb) {
       description: 'Vamos a repasar todo lo visto en la semana',
       image: 'http://www.mondalua.com/wp-content/uploads/2013/09/Mates-500x281.jpg',
       questionId: [1, 2, 3, 4, 5],
-      questionnaireGameId: 1,
       teacherId: 1000
     }, {
       id: 2,
@@ -67,7 +69,6 @@ module.exports = function (app, cb) {
       description: 'Vamos a practicar restas',
       image: 'https://matematicasmodernas.com/wp-content/uploads/2014/09/Resta-de-vectores.jpg',
       questionId: [3, 4, 5],
-      questionnaireGameId: 2,
       teacherId: 1000
     }, {
       id: 3,
@@ -75,7 +76,6 @@ module.exports = function (app, cb) {
       description: 'Vamos a practicar potencias',
       image: 'https://cdnblog-199133.c.cdn77.org/blog/wp-content/uploads/potenicas.png',
       questionId: [6, 7, 8],
-      questionnaireGameId: 3,
       teacherId: 1000
     }, {
       id: 4,
@@ -83,7 +83,6 @@ module.exports = function (app, cb) {
       description: 'Vamos a repasar las capitales de provincia de españa',
       image: 'https://profesorpaco.files.wordpress.com/2015/03/mapa-mundo-provincia-y-capitales-espac3b1olas.jpg',
       questionId: [9, 10, 11],
-      questionnaireGameId: 3,
       teacherId: 1000
     }], function (err, questionnaires) {
       if (err) throw err;
@@ -108,7 +107,6 @@ module.exports = function (app, cb) {
                   difficulty: 'easy',
                   category: 'operations',
                   explanation: 'La suma de 2+2 siempre da 4.',
-                  questionnaireId: 1,
                   teacherId: 1000,
                   type: "classic"
                 },
@@ -124,7 +122,6 @@ module.exports = function (app, cb) {
                   difficulty: 'medium',
                   category: 'operations',
                   explanation: 'La suma de 9+4 siempre da 13.',
-                  questionnaireId: 1,
                   teacherId: 1000,
                   type: "classic"
 
@@ -141,7 +138,6 @@ module.exports = function (app, cb) {
                   difficulty: 'hard',
                   category: 'operations',
                   explanation: 'La resta de 10-6 siempre da 4.',
-                  questionnaireId: [1, 2],
                   teacherId: 1000,
                   type: "classic"
                 },
@@ -157,7 +153,6 @@ module.exports = function (app, cb) {
                   difficulty: 'hard',
                   category: 'operations',
                   explanation: 'La resta de 100-39 siempre da 61.',
-                  questionnaireId: [1, 2],
                   teacherId: 1000,
                   type: "classic"
                 },
@@ -173,7 +168,6 @@ module.exports = function (app, cb) {
                   difficulty: 'medium',
                   category: 'operations',
                   explanation: 'La resta de 20-11 siempre da 9.',
-                  questionnaireId: [1, 2],
                   teacherId: 1000,
                   type: "classic"
                 },
@@ -189,7 +183,6 @@ module.exports = function (app, cb) {
                   difficulty: 'hard',
                   category: 'power',
                   explanation: 'La raiz siempre nos da dos valores. +-2',
-                  questionnaireId: 3,
                   teacherId: 1000,
                   type: "multianswer"
                 },
@@ -202,9 +195,8 @@ module.exports = function (app, cb) {
                   difficulty: 'hard',
                   category: 'power',
                   explanation: '2x2x2 = 8',
-                  questionnaireId: 3,
                   teacherId: 1000,
-                  type: "openAnswer"
+                  type: "openQuestion"
                 },
                 {
                   id: 8,
@@ -218,7 +210,6 @@ module.exports = function (app, cb) {
                   difficulty: 'hard',
                   category: 'power',
                   explanation: '(-3)*(-3) = 9',
-                  questionnaireId: 3,
                   teacherId: 1000,
                   type: "classic"
                 },
@@ -234,7 +225,6 @@ module.exports = function (app, cb) {
                   difficulty: 'easy',
                   category: 'capitales',
                   explanation: 'La capital de Cataluña es Barcelona',
-                  questionnaireId: 4,
                   teacherId: 1000,
                   type: "classic"
                 },
@@ -249,7 +239,6 @@ module.exports = function (app, cb) {
                   difficulty: 'easy',
                   category: 'capitales',
                   explanation: 'La capital de Extremadura es Mérida',
-                  questionnaireId: 4,
                   teacherId: 1000,
                   type: "classic"
                 },
@@ -264,8 +253,7 @@ module.exports = function (app, cb) {
                   image: 'https://www.red2000.com/spain/images/m-r-galicia.gif',
                   difficulty: 'easy',
                   category: 'capitales',
-                  explanation: 'La capital de Extremadura es Mérida',
-                  questionnaireId: 4,
+                  explanation: 'Las provincias de Galicia són: A Coruña, Lugo, Ourense y Pontevedra',
                   teacherId: 1000,
                   type: "multianswer"
                 }

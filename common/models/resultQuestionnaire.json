@@ -6,45 +6,33 @@
     "validateUpsert": true
   },
   "properties": {
-    "questionnaire": {
-      "type": "Questionnaire",
-      "required": true
-    },
-    "student": {
-      "type": "Student",
-      "required": true
-    },
-    "questionnaireName": {
-      "type": "string",
-      "required": true
-    },
-    "numTotalQuestions": {
-      "type": "number",
-      "required": true
+    "questionnaireGame": {
+      "type": "QuestionnaireGame",
+      "required": false
     },
     "numAnswerCorrect": {
       "type": "number",
-      "required": true
+      "required": false
     },
     "numAnswerNoCorrect": {
       "type": "number",
-      "required": true
+      "required": false
     },
     "finalNote": {
       "type": "number",
-      "required": true
+      "required": false
     },
     "dataAnswers": {
-      "type": "string",
-      "required": true
+      "type": "[]",
+      "required": false
     }
   },
   "validations": [],
   "relations": {
-    "questionnaire": {
+    "questionnaireGame": {
       "type": "belongsTo",
       "model": "Questionnaire",
-      "foreignKey": "questionnaireId"
+      "foreignKey": "questionnaireGameId"
     },
     "student": {
       "type": "belongsTo",
@@ -52,8 +40,7 @@
       "foreignKey": "studentId"
     }
   },
-  "acls": [
-    {
+  "acls": [{
       "accessType": "*",
       "principalType": "ROLE",
       "principalId": "$everyone",

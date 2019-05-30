@@ -30,7 +30,7 @@
     "questionnaireGame": {
       "type": "hasAndBelongsToMany",
       "model": "QuestionnaireGame",
-      "foreignKey": "questionnaireGameId"
+      "foreignKey": "questionnaireId"
     },
     "teacher": {
       "type": "belongsTo",

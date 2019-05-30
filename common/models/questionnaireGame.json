@@ -12,11 +12,11 @@
       "required": true
     },
     "start_date": {
-      "type": "date",
+      "type": "number",
       "required": false
     },
     "finish_date": {
-      "type": "date",
+      "type": "number",
       "required": false
     },
     "question_time": {
@@ -64,6 +64,11 @@
       "type": "hasAndBelongsToMany",
       "model": "Questionnaire",
       "foreignKey": "questionnaireId"
+    },
+    "resultQuestionnaire": {
+      "type": "hasMany",
+      "model": "resultQuestionnaire",
+      "foreignKey": "questionnaireGameId"
     }
   },
   "acls": [{
