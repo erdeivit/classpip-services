@@ -49,7 +49,7 @@ module.exports = function (app, cb) {
       questionnaire_time: '100',
       groupId: 1,
       teacherId: 1000,
-      gameMode: 'FlipcardsPip',
+      gameMode: 'FlipCardsPip',
       teamMode: 0,
       questionnaireId: 4
     }
@@ -184,7 +184,7 @@ module.exports = function (app, cb) {
                   category: 'power',
                   explanation: 'La raiz siempre nos da dos valores. +-2',
                   teacherId: 1000,
-                  type: "multianswer"
+                  type: "multiAnswer"
                 },
                 {
                   id: 7,
@@ -255,7 +255,7 @@ module.exports = function (app, cb) {
                   category: 'capitales',
                   explanation: 'Las provincias de Galicia són: A Coruña, Lugo, Ourense y Pontevedra',
                   teacherId: 1000,
-                  type: "multianswer"
+                  type: "multiAnswer"
                 }
               ], function (err, q) {
                 if (err) throw err;
