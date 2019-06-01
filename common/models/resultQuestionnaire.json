@@ -8,19 +8,23 @@
   "properties": {
     "questionnaireGame": {
       "type": "QuestionnaireGame",
-      "required": false
+      "required": true
     },
     "numAnswerCorrect": {
       "type": "number",
-      "required": false
+      "required": true
     },
     "numAnswerNoCorrect": {
       "type": "number",
-      "required": false
+      "required": true
     },
     "finalNote": {
       "type": "number",
-      "required": false
+      "required": true
+    },
+    "answerDate": {
+      "type": "number",
+      "required": true
     },
     "dataAnswers": {
       "type": "[]",
