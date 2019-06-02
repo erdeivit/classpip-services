@@ -22,13 +22,9 @@
       "type": "number",
       "required": true
     },
-    "answerDate": {
+    "numTotalOfQuestions": {
       "type": "number",
       "required": true
-    },
-    "dataAnswers": {
-      "type": "[]",
-      "required": false
     }
   },
   "validations": [],
