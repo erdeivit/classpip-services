@@ -1,0 +1,19 @@
+txt created by David Hernández on QP 2018/19 (Feb19 - Jun19) Contact: erdeivit@gmail.com
+
+In this file you should add each BBDDmodel that you create, in order to let angular to find your models.
+It should have the same name as the model.
+
+Ej:
+
+test.json
+{
+  "name": "test",
+  "base": "PersistedModel",
+  ...
+}
+
+model-config.json
+
+"test": {
+  ...
+  },

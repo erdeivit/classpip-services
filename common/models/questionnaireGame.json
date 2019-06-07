@@ -13,11 +13,11 @@
     },
     "start_date": {
       "type": "number",
-      "required": false
+      "required": true
     },
     "finish_date": {
       "type": "number",
-      "required": false
+      "required": true
     },
     "question_time": {
       "type": "number",
@@ -25,10 +25,6 @@
     },
     "questionnaire_time": {
       "type": "number",
-      "required": false
-    },
-    "results": {
-      "type": {},
       "required": false
     },
     "points": {
@@ -64,11 +60,6 @@
       "type": "hasAndBelongsToMany",
       "model": "Questionnaire",
       "foreignKey": "questionnaireId"
-    },
-    "resultQuestionnaire": {
-      "type": "hasMany",
-      "model": "resultQuestionnaire",
-      "foreignKey": "questionnaireGameId"
     }
   },
   "acls": [{

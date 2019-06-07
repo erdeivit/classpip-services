@@ -1,0 +1,27 @@
+Module created by David Hernández on QP 2018/19 (Feb19 - Jun2019) Contact: erdeivit@gmail.com
+
+This module is part of the questionnaires block.
+
+In this module you can configure the parameters of the questionnaire model:
+
+- id: This store a index of each questionnaire.
+  Type:number:auto-incremented.
+
+- name: This store the name of the questionnaire.
+  Type:string
+
+- description: This store a brief descripcion of the questionnaire.
+  Type:string
+
+- image: This store the URL of the image.
+  Type:string
+
+- teacherId: This store the id of the teacher that creates the question.
+  Type:number
+
+- questionId: This store all the ids of the questions it has.
+  Type:[number] (Array of numbers)
+  Ej. [3,5,7,9]
+
+
+

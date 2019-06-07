@@ -25,15 +25,14 @@
     "numTotalOfQuestions": {
       "type": "number",
       "required": true
+    },
+    "userAnswers": {
+      "type": "array",
+      "required": true
     }
   },
   "validations": [],
   "relations": {
-    "questionnaireGame": {
-      "type": "belongsTo",
-      "model": "Questionnaire",
-      "foreignKey": "questionnaireGameId"
-    },
     "student": {
       "type": "belongsTo",
       "model": "Student",

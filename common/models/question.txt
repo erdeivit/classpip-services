@@ -1,0 +1,49 @@
+Module created by David Hernández on QP 2018/19 (Feb19 - Jun19) Contact: erdeivit@gmail.com
+
+This module is part of the questionnaires block.
+
+In this module you can configure the parameters of the question model:
+
+- id: This store a index of each question.
+  Type:number:auto-incremented.
+
+- statement: This store the statement of the question.
+  Type:string
+
+- answer1,answer2,answer3,answer4,answer5,answer6: These are the multiple answers that can have one question.
+  Type:string
+
+- correctanswer: This store all the answers that are consider correct, separated by commas.
+  Type:string
+
+- image: This store the URL of the image.
+  Type:string
+
+On date 07/06/2018 is not used, just stored.
+- difficulty: This store the difficulty.
+  Type:string
+  Possible values:{hard,medium,easy}
+
+On date 07/06/2018.
+Possible improvement: configure all the category by user in one function, in order to avoid categorires like "Operations, operations, operation" which are different if we want to filter/sort them.
+- category: This store the category.
+  Type:string
+
+- explanation: This store one explanation of why is the answer of the question.
+  Type:string
+
+- type: This store the type of the question.
+  Type:string
+  Possible values:{
+  classic: The question only has one correct answer.
+  multiAnswer: The question has more than one correct answer.
+  openQuestion: The question has no possible pre-defined answers, and will answer using a textArea.
+  }
+
+- teacherId: This store the id of the teacher that creates the question.
+  Type: number.
+
+
+
+
+

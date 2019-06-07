@@ -1,0 +1,63 @@
+Module created by David Hernández on QP 2018/19 (Feb19 - Jun2019) Contact: erdeivit@gmail.com
+
+This module is part of the questionnaires block.
+
+In this module you can configure the parameters of the questionnaireGame model:
+
+- id: This store a index of each questionnaireGame.
+  Type:number:auto-incremented.
+
+- name: This store the name of the questionaireGame.
+  Type:string
+
+- description: This store a brief descripcion of the questionnaire.
+  Type:string
+
+- start_date: This store the start date of the questionnaireGame. Store the equivalent of the Date in number (The number of ms that has pased from the 01/01/1970).
+  Type:number (in miliseconds)
+
+- finish_date: This store the finish date of the questionnaireGame. Store the equivalent of the Date in number (The number of ms that has pased from the 01/01/1970).
+  Type:number (in miliseconds)
+
+- question_time: This store the maximum time that has the student for answer each question. Is stored in seconds.
+  Type:number (in seconds) OPTIONAL (You cannot configure this with questionnaire_time)
+
+- questionnaire_time: This store the maximum time that has the student for answer the whole questionnaire. Is stored in seconds.
+  Type:number (in seconds) OPTIONAL (You cannot configure this with question_time)
+
+On date 07/06/2018 is not used.
+- points: It is thought that here store the points that each of the winners (1st, 2nd, 3th or whoever) will get when they answer the questionnaire.
+  Type:[strings] (Array of strings) This can be edited.
+
+On date 07/06/2018 is not used.
+- prizes: It is thought that here store the prizes(advantatges) that each of the winners (1st, 2nd, 3th or whoever) will get when they answer the questionnaire.
+  Type:[strings] (Array of strings) This can be edited.
+
+- gameMode: This store the type of games of the questionnaireGame.
+  Type:string
+  Possible values:{
+    QuizPip (Already implemented): This is the classical way of play a questionnaire. You have all the questions listed and a final submit button,
+    1by1 (Already implemented): Questions will appear one by one, when we press the submit button,
+    FlipCardsPip (Already implemented): This is focused to study. The statement of the question appears and the student will try to guess the answer (without any option to choose),
+    Qlasspip (Not implemented): This will try to copy the game of Kahoot (online),
+    TimeToLearn (Not implemented): One question will appear in any hour of the day (using a bar notification),
+    TrivialClip (Not implemented): It is thought to make a game similar to Trivial.
+  }
+
+On date 07/06/2018 is not used, just stored.
+- teamMode: This store the way that the questionnaireGame is going to be played.
+  Type:number
+  Possible values:{
+    1: Which means individual. Each student will answer on his smartphone,
+    2: Which means on team, but each one with his smartphone. After the questionnaire ends, will to the mean of the team,
+    3: Which means on team, but all the team with only one smartphone. After the questionnaire ends, will copy the final mark to all the team.
+  }
+
+-groupId: Each questionnaireGame is related only to a group. It store the id of the group.
+  Type:number
+
+-teacherId: Each questionnaireGame is related only to a teacher. It store the id of the teacher.
+  Type:number
+
+-questionnaireId: Each questionnaireGame is related only to one questionaire. It store the id of the questionnaire.
+  Type:number

@@ -1,0 +1,33 @@
+Module created by David Hernández on QP 2018/19 (Feb19 - Jun2019) Contact: erdeivit@gmail.com
+
+This module is part of the questionnaires block.
+IMPORTANT: THIS MODULE IS NOT INITIALIZED. IT DOES NOT HAVE ANY INITIAL PARAMETERS IN THE BBDD.
+
+In this module you can configure the parameters of the resultQuestionnaire model:
+
+- id: This store a index of each resultQuestionnaire.
+  Type:number:auto-incremented.
+
+- questionnaireGame: This store the whole questionnaireGame of the game. In order to have some important values (teacherId, which was the questionnaireGame,...)
+  Type:questionnaireGame
+
+- numAnswerCorrect: This store the total of answers that the student answer correctly.
+  Type:number
+
+- numAnswerNoCorrect: This store the total of answers that the student answer wrongly.
+  Type:number
+
+- finalNote: This store the total of answers that the student answer wrongly.
+  Type:number
+
+- numTotalOfQuestions: This store the total amount of questions of this questionnaire.
+  Type:number
+
+- userAnswers: To know what exactlty did the student in the questionnaireGame.
+  Type:[string] (Array of strings)
+
+- questionnaireGameId: Each result is related to a questionnaireGame.
+  Type:number
+
+- studentId: Each result is related to one student.
+  Type:number

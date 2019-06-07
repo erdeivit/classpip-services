@@ -1,0 +1,18 @@
+File created by David Hernández on QP 2018/19 (Feb19 - Jun19) Contact: erdeivit@gmail.com
+
+In this file, is where all the questionnaires are inizialized.
+IMPORTANT: The resultQuestionnaire does not have anything inizialized.
+This file will be deleted when the database will go to public (now is in localhost).
+
+Remember the structure of the questionnaireModels.
+One questionnaireGame can only have one questionnaire.
+One questionnaire can belong to multiple questionnaireGames.
+
+One questionnaire can have lot of questions.
+Each question can belong to multiple questionnaires.
+
+The structure of the inizialization is:
+First of all the questionnairesGame are created.
+Then each questionnaire is created and asigned to one/more than one questionnaireGame.
+Finally all the questions are created and asigned to one/more than one questionnaire.
+
