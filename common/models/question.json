@@ -37,7 +37,7 @@
     },
     "correctanswer": {
       "type": "string",
-      "required": false
+      "required": true
     },
     "image": {
       "type": "string",
@@ -46,11 +46,11 @@
     },
     "difficulty": {
       "type": "string",
-      "required": false
+      "required": true
     },
     "category": {
       "type": "string",
-      "required": false
+      "required": true
     },
     "explanation": {
       "type": "string",
