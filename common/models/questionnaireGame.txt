@@ -13,10 +13,10 @@ In this module you can configure the parameters of the questionnaireGame model:
 - description: This store a brief descripcion of the questionnaire.
   Type:string
 
-- start_date: This store the start date of the questionnaireGame. Store the equivalent of the Date in number (The number of ms that has pased from the 01/01/1970).
+- start_date: This store the start date of the questionnaireGame. Store the equivalent of the Date in number (The number of ms that has passed from the 01/01/1970).
   Type:number (in miliseconds)
 
-- finish_date: This store the finish date of the questionnaireGame. Store the equivalent of the Date in number (The number of ms that has pased from the 01/01/1970).
+- finish_date: This store the finish date of the questionnaireGame. Store the equivalent of the Date in number (The number of ms that has passed from the 01/01/1970).
   Type:number (in miliseconds)
 
 - question_time: This store the maximum time that has the student for answer each question. Is stored in seconds.

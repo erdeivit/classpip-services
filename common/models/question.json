@@ -9,7 +9,8 @@
   "properties": {
     "statement": {
       "type": "string",
-      "required": true
+      "required": true,
+      "datatype": "longtext"
     },
     "answer1": {
       "type": "string",
